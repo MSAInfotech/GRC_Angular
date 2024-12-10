@@ -1,0 +1,172 @@
+
+body {
+    background-color: #f8f9fa;
+  }
+/*   
+  .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-header {
+    font-size: 1.25rem;
+    font-weight: bold;
+  } */
+  
+  .form-label {
+    font-weight: 500;
+  }
+  
+  button[type="submit"] {
+    min-width: 100px;
+  }
+  .container {
+    max-width: 90%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  /* .tabs {
+    display: flex;
+    border-bottom: 2px solid #e0e0e0;
+    margin-bottom: 20px;
+  } */
+  /* .tab {
+    flex: 1;
+    padding: 5px 10px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #f8f9fa;
+    border: none;
+    outline: none;
+    font-size: 16px;
+  } */
+  
+  /* .tab.active {
+    background-color: #c4e538;
+    font-weight: bold;
+    color: #fff;
+  } */
+  /* .form {
+    display: flex;
+    flex-direction: column;
+  } */
+  .header{
+   margin-left: 5%;
+  }
+
+  .nav-tabs .nav-item {
+    text-align: center;
+}
+
+.nav-tabs .nav-link {
+    font-weight: bold;
+    color: #495057;
+}
+
+
+.nav-tabs .nav-link.active {
+    background-color: blue;
+    color: #fff;
+}
+
+  /* .tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    padding: 0.3rem;
+}
+.tag-green {
+    background-color: palegreen;
+}
+.tag-gray {
+    background-color: lightgray;
+} */
+
+/* body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 90%;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .tabs {
+    display: flex;
+    border-bottom: 2px solid #e0e0e0;
+    margin-bottom: 20px;
+  }
+  
+  .tab {
+    flex: 1;
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #f8f9fa;
+    border: none;
+    outline: none;
+    font-size: 16px;
+  }
+  
+  .tab.active {
+    background-color: #c4e538;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  .form-actions {
+    text-align: right;
+  }
+  
+  .btn-next {
+    padding: 10px 20px;
+    background-color: #c4e538;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-next:hover {
+    background-color: #a4c529;
+  } */

@@ -1,0 +1,98 @@
+<head>
+    <title>Create Compliance Project</title>
+</head>
+
+<body>
+    <div class="mt-5">
+        <div class="header mb-3">
+            <h5>Create Compliance Project</h5>
+        </div>
+        <div class="container">
+            <ul class="nav nav-tabs mb-4" id="projectTabs" role="tablist">
+            
+                <li class="nav-item w-50" role="presentation">
+                    <a class="nav-link active" id="project-details-tab" data-bs-toggle="tab" data-bs-target="#project-details"
+                        type="button" role="tab" aria-controls="project-details" aria-selected="true">Project Details</a>
+                </li>
+            
+                <li class="nav-item w-50" role="presentation">
+                    <a class="nav-link" id="finish-tab" data-bs-toggle="tab" data-bs-target="#finish" type="button" role="tab"
+                        aria-controls="finish" aria-selected="false">Finish</a>
+                </li>
+            </ul>
+
+            <div class="tab-pane fade show active" id="project-details" role="tabpanel"
+                aria-labelledby="project-details-tab">
+                <form>
+                    <div class="row mb-4">
+                        <div class="col-4">
+                            <label for="projectName" class="form-label">Project Name <span
+                                    class="text-danger">*</span></label>
+                        </div>
+                        <div class="col-8">
+                            <input type="text" class="form-control" id="projectName" placeholder="Enter project name"
+                                required>
+                        </div>
+                    </div>
+
+                    <div class="row mb-4">
+                        <div class="col-4">
+                            <label for="description" class="form-label">Description <span
+                                    class="text-danger">*</span></label>
+                        </div>
+                        <div class="col-8">
+                            <textarea class="form-control" id="description" rows="3"
+                                placeholder="Enter project description" required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="row mb-4">
+                        <div class="col-4">
+                            <label for="standard" class="form-label">Standard <span class="text-danger">*</span></label>
+                        </div>
+                        <div class="col-8">
+                            <select class="form-select" id="standard" required>
+                                <option selected disabled>Choose a standard</option>
+                                <option value="ISO27001">ISO/IEC 27001 - 2:2022</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row mb-4">
+                        <div class="col-4">
+                            <label for="mapToProject" class="form-label">Map to Project</label>
+                        </div>
+                        <div class="col-8">
+                            <select class="form-select" id="mapToProject">
+                                <option selected disabled>Choose existing project</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row mb-4">
+                        <div class="col-4">
+                            <label for="autoGenerate" class="form-label">Auto-generate corresponding risk
+                                register</label>
+                        </div>
+                        <div class="col-8">
+                            <select class="form-select" id="autoGenerate">
+                                <option value="Yes">Yes</option>
+                                <option value="No" selected>No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <button type="submit" class="btn btn-primary">Next</button>
+                    </div>
+                </form>
+            </div>
+            <div class="tab-pane fade" id="finish" role="tabpanel" aria-labelledby="finish-tab">
+                <div>
+                    <div>
+                        <p>This is the Finish tab content. You can customize it as needed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
