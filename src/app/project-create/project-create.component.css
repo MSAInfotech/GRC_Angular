@@ -1,172 +1,167 @@
-
+/* General Styles */
 body {
-    background-color: #f8f9fa;
-  }
-/*   
-  .card {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .card-header {
-    font-size: 1.25rem;
-    font-weight: bold;
-  } */
-  
-  .form-label {
-    font-weight: 500;
-  }
-  
-  button[type="submit"] {
-    min-width: 100px;
-  }
-  .container {
-    max-width: 90%;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-  }
-  /* .tabs {
-    display: flex;
-    border-bottom: 2px solid #e0e0e0;
-    margin-bottom: 20px;
-  } */
-  /* .tab {
-    flex: 1;
-    padding: 5px 10px;
-    text-align: center;
-    cursor: pointer;
-    background-color: #f8f9fa;
-    border: none;
-    outline: none;
-    font-size: 16px;
-  } */
-  
-  /* .tab.active {
-    background-color: #c4e538;
-    font-weight: bold;
-    color: #fff;
-  } */
-  /* .form {
-    display: flex;
-    flex-direction: column;
-  } */
-  .header{
-   margin-left: 5%;
-  }
-
-  .nav-tabs .nav-item {
-    text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #f7fafc;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-tabs .nav-link {
-    font-weight: bold;
-    color: #495057;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
-
-.nav-tabs .nav-link.active {
-    background-color: blue;
-    color: #fff;
+main {
+  padding: 2rem 0;
 }
 
-  /* .tag {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    font-size: 1rem;
-    font-weight: bold;
-    color: white;
-    padding: 0.3rem;
+.form-container {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  padding: 2rem;
 }
-.tag-green {
-    background-color: palegreen;
-}
-.tag-gray {
-    background-color: lightgray;
-} */
 
-/* body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .container {
-    max-width: 90%;
-    margin: 50px auto;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-  }
-  
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+/* Tabs Styling */
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.tabs button {
+  flex: 1;
+  padding: 10px 20px;
+  background-color: #edf2f7;
+  border: none;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tabs button.active {
+  background-color: #63b3ed;
+  color: white;
+}
+
+.tabs button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+  color: #aaa;
+}
+
+/* Progress Bar */
+.progress-bar {
+  background-color: #e2e8f0;
+  border-radius: 0.5rem;
+  height: 5px;
+  margin: 1rem 0 30px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar .progress {
+  background-color: #63b3ed;
+  height: 100%;
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+/* Form Group */
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  flex: 0 0 25%;
+  font-weight: bold;
+  color: #4a5568;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.25rem;
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+}
+
+.form-actions button {
+  background-color: #63b3ed;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-actions button:hover {
+  background-color: #4299e1;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
   .tabs {
-    display: flex;
-    border-bottom: 2px solid #e0e0e0;
-    margin-bottom: 20px;
-  }
-  
-  .tab {
-    flex: 1;
-    padding: 10px 20px;
-    text-align: center;
-    cursor: pointer;
-    background-color: #f8f9fa;
-    border: none;
-    outline: none;
-    font-size: 16px;
-  }
-  
-  .tab.active {
-    background-color: #c4e538;
-    font-weight: bold;
-    color: #fff;
-  }
-  
-  .form {
-    display: flex;
     flex-direction: column;
+    align-items: center;
   }
-  
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-  }
-  
-  input, textarea, select {
+
+  .tabs button {
+    margin-bottom: 0.5rem;
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 16px;
   }
-  
-  textarea {
-    resize: none;
+
+  .form-container {
+    padding: 1rem;
   }
-  
+
+  .form-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-group label {
+    flex: 0 0 auto;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+  }
+
   .form-actions {
-    text-align: right;
+    justify-content: center;
   }
-  
-  .btn-next {
-    padding: 10px 20px;
-    background-color: #c4e538;
-    border: none;
-    color: white;
-    font-size: 16px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .btn-next:hover {
-    background-color: #a4c529;
-  } */
+}
