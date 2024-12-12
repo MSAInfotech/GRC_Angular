@@ -1,0 +1,7 @@
+.dropdown-item:hover {
+    background-color: #007bff; /* Primary blue */
+    color: #ffffff; /* White text */
+}
+.card-dropdown {
+    background-color: rgba(0,0,0,.03); /* Set default text color */
+}
