@@ -1,98 +1,117 @@
-<head>
-    <title>Create Compliance Project</title>
-</head>
-
-<body>
-    <div class="mt-5">
-        <div class="header mb-3">
-            <h5>Create Compliance Project</h5>
-        </div>
-        <div class="container">
-            <ul class="nav nav-tabs mb-4" id="projectTabs" role="tablist">
-            
-                <li class="nav-item w-50" role="presentation">
-                    <a class="nav-link active" id="project-details-tab" data-bs-toggle="tab" data-bs-target="#project-details"
-                        type="button" role="tab" aria-controls="project-details" aria-selected="true">Project Details</a>
-                </li>
-            
-                <li class="nav-item w-50" role="presentation">
-                    <a class="nav-link" id="finish-tab" data-bs-toggle="tab" data-bs-target="#finish" type="button" role="tab"
-                        aria-controls="finish" aria-selected="false">Finish</a>
-                </li>
-            </ul>
-
-            <div class="tab-pane fade show active" id="project-details" role="tabpanel"
-                aria-labelledby="project-details-tab">
-                <form>
-                    <div class="row mb-4">
-                        <div class="col-4">
-                            <label for="projectName" class="form-label">Project Name <span
-                                    class="text-danger">*</span></label>
-                        </div>
-                        <div class="col-8">
-                            <input type="text" class="form-control" id="projectName" placeholder="Enter project name"
-                                required>
-                        </div>
-                    </div>
-
-                    <div class="row mb-4">
-                        <div class="col-4">
-                            <label for="description" class="form-label">Description <span
-                                    class="text-danger">*</span></label>
-                        </div>
-                        <div class="col-8">
-                            <textarea class="form-control" id="description" rows="3"
-                                placeholder="Enter project description" required></textarea>
-                        </div>
-                    </div>
-
-                    <div class="row mb-4">
-                        <div class="col-4">
-                            <label for="standard" class="form-label">Standard <span class="text-danger">*</span></label>
-                        </div>
-                        <div class="col-8">
-                            <select class="form-select" id="standard" required>
-                                <option selected disabled>Choose a standard</option>
-                                <option value="ISO27001">ISO/IEC 27001 - 2:2022</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="row mb-4">
-                        <div class="col-4">
-                            <label for="mapToProject" class="form-label">Map to Project</label>
-                        </div>
-                        <div class="col-8">
-                            <select class="form-select" id="mapToProject">
-                                <option selected disabled>Choose existing project</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="row mb-4">
-                        <div class="col-4">
-                            <label for="autoGenerate" class="form-label">Auto-generate corresponding risk
-                                register</label>
-                        </div>
-                        <div class="col-8">
-                            <select class="form-select" id="autoGenerate">
-                                <option value="Yes">Yes</option>
-                                <option value="No" selected>No</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-end">
-                        <button type="submit" class="btn btn-primary">Next</button>
-                    </div>
-                </form>
-            </div>
-            <div class="tab-pane fade" id="finish" role="tabpanel" aria-labelledby="finish-tab">
-                <div>
-                    <div>
-                        <p>This is the Finish tab content. You can customize it as needed.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+<main>
+  <div class="dashboard-container">
+    <div class="form-header">
+      <h6>Create Compliance Project</h6>
     </div>
-</body>
+    <div class="form-container">
+      
+
+      <!-- Tab Navigation -->
+      <div class="tabs">
+        <button 
+          class="tab-button" 
+          [class.active]="currentTab === 'details'" 
+          (click)="switchTab('details')">
+          Project Details
+        </button>
+        <button 
+          class="tab-button" 
+          [class.active]="currentTab === 'finish'" 
+          [disabled]="!isFinishTabEnabled" 
+          (click)="switchTab('finish')">
+          Finish
+        </button>
+      </div>
+
+      <!-- Tab Content -->
+      <div *ngIf="currentTab === 'details'" class="tab-content">
+        <!-- Progress Bar -->
+        <div class="progress-bar">
+          <div class="progress" [style.width.%]="progress"></div>
+        </div>
+
+        <!-- Form Content -->
+        <form (ngSubmit)="onNext()">
+          <!-- Project Name -->
+          <div class="form-group">
+            <label for="projectName">Project Name *</label>
+            <input 
+              id="projectName" 
+              type="text" 
+              [(ngModel)]="formData.projectName" 
+              name="projectName" 
+              (input)="updateProgressBar()" 
+              required />
+          </div>
+
+          <!-- Description -->
+          <div class="form-group">
+            <label for="description">Description *</label>
+            <textarea 
+              id="description" 
+              [(ngModel)]="formData.description" 
+              name="description" 
+              (input)="updateProgressBar()" 
+              required>
+            </textarea>
+          </div>
+
+          <!-- Standard -->
+          <div class="form-group">
+            <label for="standard">Standard *</label>
+            <select 
+              id="standard" 
+              [(ngModel)]="formData.standard" 
+              name="standard" 
+              (change)="updateProgressBar()" 
+              required>
+              <option value="ISO/IEC 27001-2:2022">ISO/IEC 27001-2:2022</option>
+            </select>
+          </div>
+
+          <!-- Map to Project -->
+          <div class="form-group">
+            <label for="mapToProject">Map to project</label>
+            <select 
+              id="mapToProject" 
+              [(ngModel)]="formData.mapToProject" 
+              name="mapToProject" 
+              (change)="updateProgressBar()">
+              <option value="Choose existing project">Choose existing project</option>
+              <option value="Option 1">Option 1</option>
+              <option value="Option 2">Option 2</option>
+            </select>
+          </div>
+
+          <!-- Auto-Generate Risk Register -->
+          <div class="form-group">
+            <label for="autoGenerate">Auto-generate corresponding risk register</label>
+            <select 
+              id="autoGenerate" 
+              [(ngModel)]="formData.autoGenerate" 
+              name="autoGenerate" 
+              (change)="updateProgressBar()">
+              <option value="No">No</option>
+              <option value="Yes">Yes</option>
+            </select>
+          </div>
+
+          <!-- Form Actions -->
+          <div class="form-actions">
+            <button type="submit" class="btn-primary">Next</button>
+          </div>
+        </form>
+      </div>
+
+      <div *ngIf="currentTab === 'finish'" class="tab-content">
+        <div class="progress-bar">
+          <div class="progress" [style.width.%]="progress"></div>
+        </div>
+        <p>You can customize this tab according to your requirements.</p>
+        <div class="form-actions">
+          <button class="btn-primary" (click)="onFinish()">Finish Project</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

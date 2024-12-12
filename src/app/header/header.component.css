@@ -1,0 +1,173 @@
+.header {
+    background-color: #ffffff;
+    /* Orange bottom border */
+    color: #232323;
+    padding-left: 6%;
+    padding-right: 6%;
+    /* Dark text */
+}
+
+.header h1 {
+    font-size: 15px;
+    color: #eb812b;
+    /* Orange text for the title */
+    margin: 0;
+    /* text-shadow: 1px 1px 0 #c0c0c0; */
+}
+
+.logo-img {
+    height: 50px;
+    width: 50px;
+    /* Set height for the logo */
+}
+
+.nav-icons i {
+    color: #495057;
+    /* Icon color (dark gray) */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.nav-icons i:hover {
+    color: #eb812b;
+    /* Orange color on hover */
+}
+
+.profile img {
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+    border: 2px solid #eb812b;
+    /* Border around the profile picture */
+}
+
+.profile span {
+    font-size: 12px;
+}
+
+.dropdown-menu {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Sub-header styling */
+.sub-header {
+    background-color: #495057;
+}
+
+/* Navbar Link Styles */
+.navbar .nav-link {
+    color: #ffffff;
+    /* White text for links */
+    font-size: 16px;
+    /* Adjust font size */
+    font-weight: bold;
+    /* Bold text */
+    transition: all 0.3s ease;
+    /* Smooth transition */
+}
+
+/* Hover effect on links */
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: #eb812b;
+    /* Orange text on hover */
+    text-decoration: underline;
+    /* Underline effect on hover */
+}
+
+/* Navbar Dropdown Styles */
+.navbar .dropdown-menu {
+    background-color: #495057;
+    /* Match dropdown background with header */
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    z-index: 9999;
+    /* Ensure dropdown stays above other elements */
+}
+
+/* Dropdown item styles */
+.navbar .dropdown-item {
+    color: #ffffff;
+    /* White dropdown text */
+    font-size: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect on dropdown items */
+.navbar .dropdown-item:hover {
+    background-color: #eb812b;
+    /* Orange background */
+    color: #232323;
+    /* Dark text on hover */
+}
+
+/* Navbar icon styles */
+.nav-item .nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #eb812b;
+    /* Match your color scheme */
+    font-size: 14px;
+    /* Adjust font size for text */
+}
+
+/* Icon styles */
+.nav-item .nav-link i {
+    font-size: 15px;
+    /* Icon size */
+    color: #fff;
+    /* Icon color */
+}
+
+/* Text styles */
+.nav-item .nav-link span {
+    font-size: 10px;
+    color: #fff;
+}
+
+/* Icon hover effect */
+.nav-item .nav-link i:hover {
+    color: #ffffff;
+    /* White icon on hover */
+}
+
+/* Navbar item margin */
+.nav-item {
+    margin: 0 15px;
+    /* Add spacing between each nav-item */
+}
+
+/* Enable dropdown to open on hover */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    /* Show the dropdown menu on hover */
+    margin-top: 0;
+    /* Adjust positioning to remove dropdown lag */
+    animation: fadeIn 0.3s;
+    /* Smooth dropdown fade-in effect */
+    min-width: fit-content;
+}
+
+/* Remove toggle indicator when using hover */
+.nav-item.dropdown:hover>.nav-link {
+    text-decoration: underline;
+    color: #eb812b;
+}
+
+/* Dropdown hover animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
