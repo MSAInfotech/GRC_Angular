@@ -52,3 +52,8 @@ padding-left: 5%;
 padding-right: 5%;
 margin-top: 2%;
 }
+
+::ng-deep .p-datatable-gridlines .p-datatable-header 
+{
+  border-width: 0 !important;
+}

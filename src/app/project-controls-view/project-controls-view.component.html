@@ -1,9 +1,11 @@
 <div class="project-detail">
+    <h6>Project Details</h6>
+
+</div>
+<div class="project-detail">
     <p-card [style]="{ 'padding-left': '.25%','padding-right': '.25%' }">
         <ng-template pTemplate="header">
-            <div class="card-header px-4 pt-2">
-                <h6>Project Details</h6>
-            </div>
+            
         </ng-template>
 
         <div>
@@ -85,8 +87,7 @@
                         </td>
 
                         <td>{{projectControlInfo.automation}}</td>
-
-                        <!-- <td>{{ContactInfo.responsible}}</td> -->
+                       
                         <td>
                             <p-dropdown [options]="responsible" [panelStyle]="{ width: '100%' }"
                                 [(ngModel)]="projectControlInfo.responsible" placeholder="Select"
