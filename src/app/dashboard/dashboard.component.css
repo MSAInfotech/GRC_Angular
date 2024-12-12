@@ -1,0 +1,425 @@
+.dashboard-container {
+    max-width: 1519.2px;
+    margin: 20px auto;
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+.custom-date-picker {
+    position: relative;
+    display: flex;
+    margin-left: 90%;
+    width: 145px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    top: 0px;
+
+}
+
+.custom-date-picker input[type="date"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-date-picker span {
+    flex-grow: 1;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+}
+
+.custom-date-picker i {
+    color: #888;
+    pointer-events: none;
+}
+
+.dropdown-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    /* border-radius: 5px; */
+    background-color: #fff;
+    padding: 8px 12px;
+    max-width: 200px;
+    margin-left: auto;
+    /* Align to the right */
+}
+
+.dropdown-box:hover {
+    border-color: #63b3ed;
+}
+
+.dropdown-box span {
+    font-size: 12px;
+    color: #333;
+}
+
+.dropdown-box i {
+    font-size: 14px;
+    color: #666;
+}
+
+.card {
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card h1 {
+    font-size: 28px;
+    color: #2d2d2d;
+    /* margin: 10px 0 5px; */
+}
+
+.card p {
+    font-size: 14px;
+    color: #6b6b6b;
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.chart-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.chart-circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 10px solid #eee;
+    position: relative;
+}
+
+.chart-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 10px solid green;
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+    /* 30% progress */
+}
+
+.chart-percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.list-group {
+    list-style: none;
+    padding: 0;
+}
+
+.list-group-item {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Add more specific styling for visual match */
+.card-title {
+    color: #333;
+    /* Adjust color as needed */
+    text-align: start;
+}
+
+.chart-circle {
+    border-color: #ddd;
+    /* Adjust border color */
+}
+
+.chart-progress {
+    border-color: #4CAF50;
+    /* Adjust progress bar color */
+}
+
+.list-group-item {
+    color: #666;
+    /* Adjust text color */
+}
+
+:host ::ng-deep canvas {
+    height: 250px;
+}
+
+.btn-export {
+    margin-top: 10px;
+}
+
+.w-69 {
+    width: 69%;
+}
+
+.w-29 {
+    width: 29%;
+}
+
+.w-20 {
+    flex: 0 0 auto;
+    width: 20% !important;
+}
+
+/* jaymish */
+.progress-circle-container {
+    width: 200px;
+    height: 150px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.task-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.task-list li span i {
+    color: #838683;
+}
+
+.task-list li:last-child {
+    border-bottom: none;
+}
+
+.go-btn {
+    background: #e0dbd1;
+    border: none;
+    border-radius: 17px;
+    padding: 4px 12px;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.go-btn:hover {
+    background: #838683;
+}
+
+.progress-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border-bottom: none;
+    background: conic-gradient(#4caf50 0% 30%,
+            #b1adae 30% 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.progress-circle .circle-inner {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #4caf50;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.progress-circle1 {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: conic-gradient(#4caf50 0% 30%,
+            #b92a4e 30% 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.progress-circle1 .circle-inner1 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #4caf50;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .progress-circle-container {
+        width: 150px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 576px) {
+    .task-list li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .go-btn {
+        margin-top: 5px;
+        align-self: flex-end;
+    }
+}
+
+.calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.calendar-table th {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.calendar-table td {
+    height: 80px;
+    position: relative;
+    font-size: 0.9rem;
+    padding: 8px;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    box-sizing: border-box;
+
+}
+
+.calendar-table td:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+    transform: scale(1.03);
+}
+
+ .current-day {
+    background-color: #ffeeba;
+    color: #856404;
+    font-weight: bold;
+    border: 2px solid #ffecb5;
+    border-radius: 8px;
+}
+
+.festival-day {
+    background-color: #fef6f6;
+    border: 2px solid #ffbec5;
+    border-radius: 8px;
+    box-sizing: border-box;
+ display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.festival {
+    font-size: 0.75rem;
+    color: #e74c3c;
+    font-weight: bold;
+    margin-top: 5px;
+    margin: 0;
+    padding: 0;
+}
+
+.date {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    .calendar-table td {
+        height: 70px;
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+
+    .calendar-table th {
+        font-size: 0.85rem;
+        padding: 8px;
+    }
+
+    .date {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .calendar-table td {
+        height: 60px;
+        font-size: 0.75rem;
+        padding: 3px;
+    }
+
+    .calendar-table th {
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+
+    .date {
+        font-size: 0.9rem;
+    }
+}
+
+.status-square {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 4px;
+  }
+  
+  .status-square.black {
+    background-color: black;
+  }
+  
+  .status-square.sky-blue {
+    background-color: #87ceeb;
+  }
+  
+  .status-square.red {
+    background-color: red;
+  }
+  
+  .status-square.green {
+    background-color: green;
+  }
+  
+  .tc{
+    margin-left: 65%;
+    
+  }

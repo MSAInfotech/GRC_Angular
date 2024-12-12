@@ -1,0 +1,54 @@
+.badge-success {
+    background-color: #28a745;
+  }
+  
+   .badge-warning {
+    background-color: #ffc107;
+  }
+  
+   .badge-secondary {
+    background-color: #28a745;
+  }
+ 
+::ng-deep .green-checkbox .p-checkbox-box {
+  background-color: #4caf50 !important; 
+  border-color: #4caf50 !important;    
+}
+::ng-deep .green-checkbox .p-checkbox-icon {
+  color: #ffffff !important; 
+}
+
+.card-header {
+  display: flex;
+  color: black;
+}
+
+.table-container {
+  padding: 10px;
+}
+
+::ng-deep .p-table thead {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+::ng-deep .p-table tbody tr:hover {
+  background-color: #e9f7ef;
+}
+.truncate-cell {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.customebutton{
+  margin-left: 76%;
+
+}
+
+.project-detail{
+padding-left: 5%;
+padding-right: 5%;
+margin-top: 2%;
+}
