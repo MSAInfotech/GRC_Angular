@@ -1,8 +1,8 @@
 .dashboard-container {
     max-width: 1519.2px;
-    margin: 20px auto;
-    padding-left: 6%;
-    padding-right: 6%;
+    margin: 10px auto;
+    padding-left: 3%;
+    padding-right: 3%;
 }
 
 .custom-date-picker {
@@ -302,18 +302,19 @@
 .calendar-table {
     width: 100%;
     border-collapse: collapse;
-}
-
-.calendar-table th {
-    background-color: #007bff;
+  }
+  
+  .calendar-table th {
+    background-color: #23292e;
     color: #fff;
     padding: 10px;
     font-size: 1rem;
     text-transform: uppercase;
-}
-
-.calendar-table td {
-    height: 80px;
+  }
+  
+  .calendar-table td {
+    height: 80px; 
+    vertical-align: top;
     position: relative;
     font-size: 0.9rem;
     padding: 8px;
@@ -321,84 +322,91 @@
     transition: background-color 0.3s ease, transform 0.2s ease;
     cursor: pointer;
     box-sizing: border-box;
-
-}
-
-.calendar-table td:hover {
+  }
+  
+  .calendar-table td:hover {
     background-color: rgba(0, 123, 255, 0.1);
     transform: scale(1.03);
-}
+  }
+  
 
- .current-day {
+  .current-day {
     background-color: #ffeeba;
     color: #856404;
     font-weight: bold;
     border: 2px solid #ffecb5;
     border-radius: 8px;
-}
-
-.festival-day {
+  }
+  
+ 
+  .festival-day {
     background-color: #fef6f6;
     border: 2px solid #ffbec5;
     border-radius: 8px;
     box-sizing: border-box;
- display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-.festival {
+    height: 80px; 
+  }
+  
+  .festival {
     font-size: 0.75rem;
     color: #e74c3c;
     font-weight: bold;
     margin-top: 5px;
     margin: 0;
     padding: 0;
-}
-
-.date {
+  }
+  
+  .date {
     font-weight: bold;
     font-size: 1.2rem;
     margin-bottom: 5px;
-}
+  }
+  
 
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
     .calendar-table td {
-        height: 70px;
-        font-size: 0.8rem;
-        padding: 5px;
+      height: 70px;
+      font-size: 0.8rem;
+      padding: 5px;
     }
-
+  
     .calendar-table th {
-        font-size: 0.85rem;
-        padding: 8px;
+      font-size: 0.85rem;
+      padding: 8px;
     }
-
+  
     .date {
-        font-size: 1rem;
+      font-size: 1rem;
     }
-}
-
-@media (max-width: 576px) {
+  }
+  
+  @media (max-width: 576px) {
     .calendar-table td {
-        height: 60px;
-        font-size: 0.75rem;
-        padding: 3px;
+      height: 60px;
+      font-size: 0.75rem;
+      padding: 3px;
     }
-
+  
     .calendar-table th {
-        font-size: 0.8rem;
-        padding: 6px;
+      font-size: 0.8rem;
+      padding: 6px;
     }
-
+  
     .date {
-        font-size: 0.9rem;
+      font-size: 0.9rem;
     }
-}
+  }
+  
+  /* h6{
+    margin: 15px;
+  } */
 
 .status-square {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     display: inline-block;
     border-radius: 4px;
   }

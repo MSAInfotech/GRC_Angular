@@ -3,7 +3,8 @@
         <div class="d-flex align-items-center justify-content-between">
             <!-- Logo and Title -->
             <div class="d-flex align-items-center">
-                <img src="https://storage.googleapis.com/a1aa/image/TBsQpgGDht7hPdQQ1yVhkcGhfEVvgqKWDBapXi6j6aXT5u8JA.jpg" class="logo-img me-2">
+                <img src="https://storage.googleapis.com/a1aa/image/TBsQpgGDht7hPdQQ1yVhkcGhfEVvgqKWDBapXi6j6aXT5u8JA.jpg"
+                    class="logo-img me-2">
                 <h1 class="mb-0 fw-bold">INFINTUM GRC</h1>
             </div>
 
@@ -15,8 +16,9 @@
                 </div>
                 <!-- Profile Dropdown -->
                 <div class="profile dropdown d-flex">
-                    <img src="https://storage.googleapis.com/a1aa/image/eev0WWGJiOsmT0tBxzYFA2tlcxPgkRizWZhExlxDmJTlyd5TA.jpg" alt="Profile Picture" id="profileDropdown"
-                        class="rounded-circle me-2" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://storage.googleapis.com/a1aa/image/eev0WWGJiOsmT0tBxzYFA2tlcxPgkRizWZhExlxDmJTlyd5TA.jpg"
+                        alt="Profile Picture" id="profileDropdown" class="rounded-circle me-2" data-bs-toggle="dropdown"
+                        aria-expanded="false">
                     <!-- User Name -->
                     <span class="fw-medium text-muted dropdown-toggle" id="profileDropdownText"
                         data-bs-toggle="dropdown" aria-expanded="false">
@@ -41,117 +43,130 @@
     </div>
     <div class="sub-header">
         <nav class="navbar navbar-expand-lg navbar-dark px-4 w-100">
-            <div class="container-fluid justify-content-center">
-                <ul class="navbar-nav d-flex flex-wrap justify-content-center w-100">
-                    <!-- Global Dashboards -->
-                    <li class="nav-item dropdown text-center mx-3">
-                        <a routerLink="/dashboard"  class="nav-link d-flex flex-column align-items-center text-decoration-none"
-                            id="dashboardDropdown" role="button" data-bs-toggle="dropdown">
-                            <i class="fas fa-chart-line mb-1"></i> <!-- Icon -->
-                            <span>Global Dashboards</span> <!-- Text -->
-                        </a>
-                        <!-- <ul class="dropdown-menu" aria-labelledby="dashboardDropdown">
-                            <li><a class="dropdown-item" >Project Details</a></li>
-                            <li><a  class="dropdown-item" >Project create</a></li>
-                        </ul> -->
-                    </li>
-                    <!-- Compliance -->
-                    <li class="nav-item dropdown text-center mx-3">
-                        <a class="nav-link d-flex flex-column align-items-center text-decoration-none" 
-                            id="complianceDropdown" role="button" data-bs-toggle="dropdown">
-                            <i class="fas fa-shield-alt mb-1"></i>
-                            <span>Compliance</span>
-                        </a>
-                        <ul class="dropdown-menu w-50" aria-labelledby="complianceDropdown">
-                            <li><a routerLink="/project-view" class="dropdown-item" >Project</a></li>
-                            <li><a class="dropdown-item" >Audit Logs</a></li>
-                        </ul>
-                    </li>
-                    <!-- Policy Management -->
-                    <li class="nav-item dropdown text-center mx-3">
-                        <a class="nav-link d-flex flex-column align-items-center text-decoration-none" href="#"
-                            id="policyDropdown" role="button" data-bs-toggle="dropdown">
-                            <i class="fas fa-file-alt mb-1"></i>
-                            <span>Policy Management</span>
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="policyDropdown">
-                            <li><a class="dropdown-item" >Policy List</a></li>
-                            <li><a class="dropdown-item" >Policy Updates</a></li>
-                        </ul>
-                    </li>
-                    <!-- Risk Management -->
-                    <li class="nav-item dropdown text-center mx-3">
-                        <a class="nav-link d-flex flex-column align-items-center text-decoration-none" href="#"
-                            id="riskDropdown" role="button" data-bs-toggle="dropdown">
-                            <i class="fas fa-exclamation-triangle mb-1"></i>
-                            <span>Risk Management</span>
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="riskDropdown">
-                            <li><a class="dropdown-item" >Risk Assessment</a></li>
-                            <li><a class="dropdown-item" >Risk Reports</a></li>
-                        </ul>
-                    </li>
-                    <!-- Third Party Risk -->
-                    <li class="nav-item dropdown text-center mx-3">
-                        <a class="nav-link d-flex flex-column align-items-center text-decoration-none" href="#"
-                            id="thirdPartyDropdown" role="button" data-bs-toggle="dropdown">
-                            <i class="fas fa-handshake mb-1"></i>
-                            <span>Third Party Risk</span>
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="thirdPartyDropdown">
-                            <li><a class="dropdown-item" >Vendor List</a></li>
-                            <li><a class="dropdown-item" >Vendor Assessment</a></li>
-                        </ul>
-                    </li>
-                    <!-- Asset Management -->
-                    <li class="nav-item dropdown text-center mx-3">
-                        <a class="nav-link d-flex flex-column align-items-center text-decoration-none" href="#"
-                            id="assetManagement" role="button" data-bs-toggle="dropdown">
-                            <i class="fas fa-box mb-1"></i>
-                            <span>Asset Management</span>
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="assetManagement">
-                            <li><a class="dropdown-item" >Asset List</a></li>
-                            <li><a class="dropdown-item" >Asset Report</a></li>
-                        </ul>
-                    </li>
-                    <!-- Vulnerability Management -->
-                    <li class="nav-item dropdown text-center mx-3">
-                        <a class="nav-link d-flex flex-column align-items-center text-decoration-none" href="#"
-                            id="vulnerabilityManagement" role="button" data-bs-toggle="dropdown">
-                            <i class="fas fa-shield-alt mb-1"></i>
-                            <span>Vulnerability Management</span>
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="vulnerabilityManagement">
-                            <li><a class="dropdown-item" >Vulnerability List</a></li>
-                            <li><a class="dropdown-item" >Vulnerability Report</a></li>
-                        </ul>
-                    </li>
-                    <!-- Controls -->
-                    <li class="nav-item dropdown text-center mx-3">
-                        <a class="nav-link d-flex flex-column align-items-center text-decoration-none" href="#"
-                            id="controls" role="button" data-bs-toggle="dropdown">
-                            <i class="fas fa-th mb-1"></i>
-                            <span>Controls</span>
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="controls">
-                            <li><a class="dropdown-item" >Controls List</a></li>
-                            <li><a class="dropdown-item" >Controls Report</a></li>
-                        </ul>
-                    </li>
-                    <!-- Administration -->
-                    <li class="nav-item dropdown text-center mx-3">
-                        <a class="nav-link d-flex flex-column align-items-center text-decoration-none" href="#"
-                            id="administration" role="button" data-bs-toggle="dropdown">
-                            <i class="fas fa-user-cog mb-1"></i>
-                            <span>Administration</span>
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="administration">
-                            <li><a class="dropdown-item" >Administration List</a></li>
-                            <li><a class="dropdown-item" >Administration Report</a></li>
-                        </ul>
-                    </li>
-                </ul>
+            <div class="container-fluid">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Navbar Items -->
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav d-flex flex-wrap justify-content-center w-100">
+                        <!-- Global Dashboards -->
+                        <li class="nav-item dropdown text-center mx-3">
+                            <a routerLink="/dashboard"
+                                class="nav-link d-flex flex-column align-items-center text-decoration-none"
+                                role="button" data-bs-toggle="dropdown">
+                                <i class="fas fa-chart-line mb-1"></i> <!-- Icon -->
+                                <span>Global Dashboards</span> <!-- Text -->
+                            </a>
+                        </li>
+                        <!-- Compliance -->
+                        <li class="nav-item dropdown text-center mx-3">
+                            <a class="nav-link d-flex flex-column align-items-center text-decoration-none"
+                                id="complianceDropdown" role="button" data-bs-toggle="dropdown">
+                                <i class="fas fa-shield-alt mb-1"></i>
+                                <span>Compliance</span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="complianceDropdown">
+                                <li><a routerLink="/project-view" class="dropdown-item">Project</a></li>
+                                <li><a class="dropdown-item">Audit Logs</a></li>
+                            </ul>
+                        </li>
+                         
+                        <!-- Policy Management -->
+                        <li class="nav-item dropdown text-center mx-3">
+                            <a class="nav-link d-flex flex-column align-items-center text-decoration-none"
+                                id="policyDropdown" role="button" data-bs-toggle="dropdown">
+                                <i class="fas fa-file-alt mb-1"></i>
+                                <span>Policy Management</span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="policyDropdown">
+                                <li><a class="dropdown-item">Policy List</a></li>
+                                <li><a class="dropdown-item">Policy Updates</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Risk Management -->
+                        <li class="nav-item dropdown text-center mx-3">
+                            <a class="nav-link d-flex flex-column align-items-center text-decoration-none" href="#"
+                                id="riskDropdown" role="button" data-bs-toggle="dropdown">
+                                <i class="fas fa-exclamation-triangle mb-1"></i>
+                                <span>Risk Management</span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="riskDropdown">
+                                <li><a class="dropdown-item">Risk Assessment</a></li>
+                                <li><a class="dropdown-item">Risk Reports</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Third Party Risk -->
+                        <li class="nav-item dropdown text-center mx-3">
+                            <a class="nav-link d-flex flex-column align-items-center text-decoration-none" href="#"
+                                id="thirdPartyDropdown" role="button" data-bs-toggle="dropdown">
+                                <i class="fas fa-handshake mb-1"></i>
+                                <span>Third Party Risk</span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="thirdPartyDropdown">
+                                <li><a class="dropdown-item">Vendor List</a></li>
+                                <li><a class="dropdown-item">Vendor Assessment</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Asset Management -->
+                        <li class="nav-item dropdown text-center mx-3">
+                            <a class="nav-link d-flex flex-column align-items-center text-decoration-none" href="#"
+                                id="assetManagement" role="button" data-bs-toggle="dropdown">
+                                <i class="fas fa-box mb-1"></i>
+                                <span>Asset Management</span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="assetManagement">
+                                <li><a class="dropdown-item">Asset List</a></li>
+                                <li><a class="dropdown-item">Asset Report</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Vulnerability Management -->
+                        <li class="nav-item dropdown text-center mx-3">
+                            <a class="nav-link d-flex flex-column align-items-center text-decoration-none" href="#"
+                                id="vulnerabilityManagement" role="button" data-bs-toggle="dropdown">
+                                <i class="fas fa-shield-alt mb-1"></i>
+                                <span>Vulnerability Management</span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="vulnerabilityManagement">
+                                <li><a class="dropdown-item">Vulnerability List</a></li>
+                                <li><a class="dropdown-item">Vulnerability Report</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Controls -->
+                        <li class="nav-item dropdown text-center mx-3">
+                            <a class="nav-link d-flex flex-column align-items-center text-decoration-none" href="#"
+                                id="controls" role="button" data-bs-toggle="dropdown">
+                                <i class="fas fa-th mb-1"></i>
+                                <span>Controls</span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="controls">
+                                <li><a class="dropdown-item">Controls List</a></li>
+                                <li><a class="dropdown-item">Controls Report</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Administration -->
+                        <li class="nav-item dropdown text-center mx-3">
+                            <a class="nav-link d-flex flex-column align-items-center text-decoration-none" href="#"
+                                id="administration" role="button" data-bs-toggle="dropdown">
+                                <i class="fas fa-user-cog mb-1"></i>
+                                <span>Administration</span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="administration">
+                                <li><a class="dropdown-item">Administration List</a></li>
+                                <li><a class="dropdown-item">Administration Report</a></li>
+                            </ul>
+                        </li>
+                        <!-- Add other menu items -->
+                    </ul>
+                </div>
             </div>
         </nav>
     </div>
