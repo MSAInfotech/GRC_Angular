@@ -4,4 +4,57 @@
 }
 .card-dropdown {
     background-color: rgba(0,0,0,.03); /* Set default text color */
+}/* Card Styling for Same Height */
+.card {
+    height: 100%;
+    /* Ensures equal height */
+    display: flex;
+    flex-direction: column;
+}
+.progress{
+    height: 4%; 
+}
+.progress-bar{
+    background-color: #495057;
+}
+.input-group-text{
+    padding: 0.6rem 0.75rem;
+}
+.import-export{
+    border-radius: 5px;
+    background-color: #495057;
+}
+.plus-box {
+    font-size: 100px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    /* Flexbox for centering */
+    justify-content: center;
+    /* Horizontally center */
+    align-items: center;
+    /* Vertically center */
+    color: #6c757d;
+    /* Default text color */
+    font-weight: bold;
+    margin: 0 auto 10%;
+    /* Centers the box itself in the container */
+    box-sizing: border-box;
+    /* Ensures border doesn't add to dimensions */
+    line-height: 1;
+    /* Prevent any extra line-height spacing */
+}
+
+.plus-box:hover {
+    border-color: #007bff;
+    /* Blue border on hover */
+    color: #007bff;
+    /* Blue '+' sign on hover */
+}
+
+/* Force cards to have the same size */
+.card-body {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
 }

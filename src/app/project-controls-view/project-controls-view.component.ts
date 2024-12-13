@@ -21,13 +21,14 @@ import { PaginatorModule } from 'primeng/paginator';
 import { ButtonModule } from 'primeng/button';
 import { Card, CardModule } from 'primeng/card';
 import { DatePicker } from 'primeng/datepicker';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-project-controls-view',
   standalone: true,
   imports: [CommonModule, FormsModule, TableModule, DropdownModule, PaginatorModule,
     InputTextModule, TagModule, IconFieldModule, InputIconModule, MultiSelectModule, SelectModule, CheckboxModule,
-    ButtonModule, CardModule, CalendarModule, DatePicker],
+    ButtonModule, CardModule, CalendarModule, DatePicker, RouterModule],
   templateUrl: './project-controls-view.component.html',
   styleUrl: './project-controls-view.component.css'
 })

@@ -42,13 +42,29 @@
   white-space: nowrap;
 }
 
-.customebutton{
-  margin-left: 76%;
-
-}
-
 .project-detail{
 padding-left: 5%;
 padding-right: 5%;
 margin-top: 2%;
+}
+
+::ng-deep .p-datatable-gridlines .p-datatable-header 
+{
+  border-width: 0 !important;
+}
+::ng-deep .p-datatable-paginator-bottom {
+  border-width: 0 !important;
+}
+::ng-deep .p-datatable-gridlines .p-datatable-paginator-bottom  {
+  border-width: 0 !important;
+}
+
+::ng-deep .p-card
+{
+  border-radius: 0 !important;
+}
+
+::ng-deep  .p-datatable-header{
+  padding-right: 0  !important;
+  padding-left: 0  !important;
 }

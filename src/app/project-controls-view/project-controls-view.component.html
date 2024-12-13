@@ -1,9 +1,11 @@
 <div class="project-detail">
+    <h6>Project Details</h6>
+
+</div>
+<div class="project-detail">
     <p-card [style]="{ 'padding-left': '.25%','padding-right': '.25%' }">
         <ng-template pTemplate="header">
-            <div class="card-header px-4 pt-2">
-                <h6>Project Details</h6>
-            </div>
+            
         </ng-template>
 
         <div>
@@ -12,18 +14,19 @@
                 [globalFilterFields]="['controliD', 'name', 'description', 'status', 'automation', 'responsible', 'approver', 'deadline', 'frequency', 'linkedRisk']">
 
                 <ng-template pTemplate="caption">
-                    <div class="flex" style="display: flex;">
-                        <p-iconfield iconPosition="left" class="ml-auto">
-                            <p-inputicon>
-                                <i class="pi pi-search"></i>
-                            </p-inputicon>
-                            <input pInputText type="text"
-                                (input)="dt.filterGlobal($any($event).target.value, 'contains')"
-                                placeholder="Search keyword" />
-                        </p-iconfield>
-
-                        <button class="btn btn-success  customebutton">Save
-                        </button>
+                    <div class="flex justify-content-between">
+                        <div class="justify-content-start pe-2">
+                            <p-iconfield iconPosition="left" class="ml-auto">
+                                <p-inputicon>
+                                    <i class="pi pi-search"></i>
+                                </p-inputicon>
+                                <input pInputText type="text" (input)="dt.filterGlobal($any($event).target.value, 'contains')"
+                                    placeholder="Search keyword" />
+                            </p-iconfield>
+                        </div>
+                        <div class="justify-content-end">
+                        <button class="btn btn-success">Save</button>
+                    </div>
                     </div>
                 </ng-template>
 
@@ -85,8 +88,7 @@
                         </td>
 
                         <td>{{projectControlInfo.automation}}</td>
-
-                        <!-- <td>{{ContactInfo.responsible}}</td> -->
+                       
                         <td>
                             <p-dropdown [options]="responsible" [panelStyle]="{ width: '100%' }"
                                 [(ngModel)]="projectControlInfo.responsible" placeholder="Select"

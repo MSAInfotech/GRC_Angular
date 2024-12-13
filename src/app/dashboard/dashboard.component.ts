@@ -1,12 +1,13 @@
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Component, OnInit, PLATFORM_ID, ChangeDetectorRef, inject, effect } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ChartModule } from 'primeng/chart';
 
 @Component({
     selector: 'app-dashboard',
     standalone: true,
-    imports: [ChartModule, CommonModule, RouterModule],
+    imports: [ChartModule, CommonModule, RouterModule ,FormsModule],
     templateUrl: './dashboard.component.html',
     styleUrl: './dashboard.component.css'
 })
@@ -22,50 +23,23 @@ export class DashboardComponent implements OnInit {
         'July', 'August', 'September', 'October', 'November', 'December'
     ];
 
+    yearRange: number[] = [];
+    calendarDays: { date: number | null, festival: string | null, isToday: boolean, events: string[] }[][] = [];
     festivals: Record<number, Record<number, Record<number, string>>> = {
-        2024: {
-            1: { 1: 'New Year', 14: 'Makar Sankranti' },
-            2: { 14: "Valentine's Day" },
-            3: { 8: 'Holi' },
-            4: { 22: 'Earth Day' },
-            5: { 1: 'May Day' },
-            6: { 21: 'International Yoga Day' },
-            7: { 4: 'Independence Day' },
-            8: { 15: 'Independence Day (India)' },
-            9: { 5: "Teachers' Day" },
-            10: { 24: 'Dussehra' },
-            11: { 12: 'Diwali', 27: 'Guru Nanak Jayanti' },
-            12: { 25: 'Christmas' }
-        },
-        2025: {
-            1: { 1: 'New Year', 14: 'Makar Sankranti' },
-            2: { 14: "Valentine's Day" },
-            3: { 8: 'Eid' },
-            4: { 22: 'Earth Day' },
-            5: { 1: 'May Day' },
-            6: { 21: 'International Yoga Day' },
-            7: { 4: 'Independence Day' },
-            8: { 15: 'Independence Day (India)' },
-            9: { 5: "Teachers' Day" },
-            10: { 24: 'Dussehra' },
-            11: { 12: 'Diwali', 27: 'ramzan' },
-            12: { 25: 'Christmas' }
-        }
-
+        // Add your festivals data
     };
 
-
-    // Include isToday in the type definition
-    calendarDays: { date: number | null, festival: string | null, isToday: boolean }[][] = [];
-
+    isModalOpen: boolean = false;
+    selectedDate: Date | null = null;
+    newEvent: string = '';
     platformId = inject(PLATFORM_ID);
-
     constructor(private cd: ChangeDetectorRef) {
     }
 
     ngOnInit() {
         this.initChart();
-        this.renderCalendar(this.currentYear, this.currentMonthIndex);
+        this.initializeYearRange();
+        this.renderCalendar(this.currentYear, this.currentMonthIndex)
     }
 
     initChart() {
@@ -103,6 +77,12 @@ export class DashboardComponent implements OnInit {
         }
     }
 
+    initializeYearRange(): void {
+        const startYear = 2000;
+        const endYear = 2030;
+        this.yearRange = Array.from({ length: endYear - startYear + 1 }, (_, i) => startYear + i);
+    }
+
     renderCalendar(year: number, monthIndex: number): void {
         const firstDayOfMonth = new Date(year, monthIndex, 1).getDay();
         const daysInMonth = new Date(year, monthIndex + 1, 0).getDate();
@@ -112,20 +92,20 @@ export class DashboardComponent implements OnInit {
         let date = 1;
 
         for (let i = 0; i < 6; i++) {
-            const week: { date: number | null, festival: string | null, isToday: boolean }[] = [];
+            const week: { date: number | null, festival: string | null, isToday: boolean, events: string[] }[] = [];
 
             for (let j = 0; j < 7; j++) {
                 if (i === 0 && j < firstDayOfMonth) {
-                    week.push({ date: null, festival: null, isToday: false });
+                    week.push({ date: null, festival: null, isToday: false, events: [] });
                 } else if (date > daysInMonth) {
-                    week.push({ date: null, festival: null, isToday: false });
+                    week.push({ date: null, festival: null, isToday: false, events: [] });
                 } else {
                     const isToday =
                         year === today.getFullYear() &&
                         monthIndex === today.getMonth() &&
                         date === today.getDate();
                     const festival = this.festivals[year]?.[monthIndex + 1]?.[date] || null;
-                    week.push({ date, festival, isToday });
+                    week.push({ date, festival, isToday, events: [] });
                     date++;
                 }
             }
@@ -150,6 +130,32 @@ export class DashboardComponent implements OnInit {
             this.currentYear++;
         }
         this.renderCalendar(this.currentYear, this.currentMonthIndex);
+    }
+
+    selectMonthAndYear(monthIndex: number): void {
+        this.currentMonthIndex = monthIndex;
+        this.renderCalendar(this.currentYear, this.currentMonthIndex);
+    }
+
+    openEventModal(day: { date: number | null }): void {
+        if (!day.date) return;
+        this.selectedDate = new Date(this.currentYear, this.currentMonthIndex, day.date);
+        this.isModalOpen = true;
+        this.newEvent = '';
+    }
+
+    closeModal(): void {
+        this.isModalOpen = false;
+    }
+
+    addEvent(): void {
+        if (this.selectedDate && this.newEvent.trim()) {
+            const day = this.calendarDays
+                .flat()
+                .find(d => d.date === this.selectedDate!.getDate());
+            day?.events.push(this.newEvent);
+            this.closeModal();
+        }
     }
 }
 

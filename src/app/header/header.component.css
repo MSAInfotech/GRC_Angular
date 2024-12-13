@@ -2,8 +2,8 @@
     background-color: #ffffff;
     /* Orange bottom border */
     color: #232323;
-    padding-left: 6%;
-    padding-right: 6%;
+    padding-left: 3%;
+    padding-right: 3%;
     /* Dark text */
 }
 
@@ -50,124 +50,90 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Sub-header styling */
+
 .sub-header {
     background-color: #495057;
 }
 
-/* Navbar Link Styles */
 .navbar .nav-link {
     color: #ffffff;
-    /* White text for links */
     font-size: 16px;
-    /* Adjust font size */
     font-weight: bold;
-    /* Bold text */
     transition: all 0.3s ease;
-    /* Smooth transition */
 }
 
-/* Hover effect on links */
 .navbar .nav-link:hover,
 .navbar .nav-link:focus {
     color: #eb812b;
-    /* Orange text on hover */
     text-decoration: underline;
-    /* Underline effect on hover */
 }
 
-/* Navbar Dropdown Styles */
 .navbar .dropdown-menu {
     background-color: #495057;
-    /* Match dropdown background with header */
     border: none;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    z-index: 9999;
-    /* Ensure dropdown stays above other elements */
+    width: 100%;
+    text-align: start;
 }
 
-/* Dropdown item styles */
+@media (max-width: 768px) {
+    .navbar .dropdown-menu {
+        width: 100%;
+        position: static;
+        margin-top: 0;
+        text-align: center;
+    }
+}
+
 .navbar .dropdown-item {
     color: #ffffff;
-    /* White dropdown text */
-    font-size: 10px;
+    font-size: 12px;
     transition: all 0.3s ease;
+    padding: 8px 12px;
 }
 
-/* Hover effect on dropdown items */
+.collapse {
+    visibility: unset;
+}
+
 .navbar .dropdown-item:hover {
     background-color: #eb812b;
-    /* Orange background */
-    color: #232323;
-    /* Dark text on hover */
+    color: #ffff;
 }
 
-/* Navbar icon styles */
-.nav-item .nav-link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #eb812b;
-    /* Match your color scheme */
-    font-size: 14px;
-    /* Adjust font size for text */
-}
 
-/* Icon styles */
 .nav-item .nav-link i {
     font-size: 15px;
-    /* Icon size */
     color: #fff;
-    /* Icon color */
 }
 
-/* Text styles */
 .nav-item .nav-link span {
-    font-size: 10px;
+    font-size: 12px;
     color: #fff;
 }
 
-/* Icon hover effect */
-.nav-item .nav-link i:hover {
-    color: #ffffff;
-    /* White icon on hover */
-}
-
-/* Navbar item margin */
-.nav-item {
-    margin: 0 15px;
-    /* Add spacing between each nav-item */
-}
-
-/* Enable dropdown to open on hover */
 .nav-item.dropdown:hover .dropdown-menu {
     display: block;
-    /* Show the dropdown menu on hover */
     margin-top: 0;
-    /* Adjust positioning to remove dropdown lag */
-    animation: fadeIn 0.3s;
-    /* Smooth dropdown fade-in effect */
     min-width: fit-content;
+    width: auto;
+    /* animation: fadeIn 0.3s; */
 }
 
-/* Remove toggle indicator when using hover */
-.nav-item.dropdown:hover>.nav-link {
-    text-decoration: underline;
-    color: #eb812b;
-}
-
-/* Dropdown hover animation */
-@keyframes fadeIn {
+/* @keyframes fadeIn {
     from {
         opacity: 0;
     }
-
     to {
         opacity: 1;
     }
+  } */
+
+.navbar-toggler {
+    border: none;
+    outline: none;
 }
 
-
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
