@@ -53,7 +53,7 @@ export class ProjectControlsViewComponent {
       "controlId": "4.1",
       "name": "jay patel",
       "description": "The Organization needs to Provide the data.",
-      "status": "completed",
+      "status": "Completed",
       "automation": "Implemented",
       "responsible": "jay patel",
       "approver": "jay patel",
@@ -64,12 +64,12 @@ export class ProjectControlsViewComponent {
     {
       "applicable": true,
       "controlId": "4.2",
-      "name": "Hitest patel",
+      "name": "Hitesh patel",
       "description": "The Organization needs to Provide the data.",
       "status": "Pending",
-      "automation": "completed",
-      "responsible": "Hitest patel",
-      "approver": "Hitest patel",
+      "automation": "Completed",
+      "responsible": "Hitesh patel",
+      "approver": "Hitesh patel",
       "deadline": new Date(),
       "frequency": "Annually",
       "linkedRisk": "none",
@@ -80,7 +80,7 @@ export class ProjectControlsViewComponent {
       "name": "Test patel",
       "description": "The Organization needs to Provide the data.",
       "status": "Pending",
-      "automation": "completed",
+      "automation": "Completed",
       "responsible": "Test patel",
       "approver": "Test patel",
       "deadline": new Date(),
@@ -93,7 +93,7 @@ export class ProjectControlsViewComponent {
       "name": "Test patel",
       "description": "The Organization needs to Provide the data.",
       "status": "Implemented",
-      "automation": "completed",
+      "automation": "Completed",
       "responsible": "Test patel",
       "approver": "",
       "deadline": new Date(),
@@ -103,12 +103,12 @@ export class ProjectControlsViewComponent {
   ];
   approverOptions = [
     { label: 'Jay Patel', value: 'jay patel' },
-    { label: 'Hitesh Patel', value: 'Hitest patel' },
+    { label: 'Hitesh Patel', value: 'Hitesh patel' },
     { label: 'Test Patel', value: 'Test patel' }
   ];
   responsible = [
     { label: 'Jay Patel', value: 'jay patel' },
-    { label: 'Hitesh Patel', value: 'Hitest patel' },
+    { label: 'Hitesh Patel', value: 'Hitesh patel' },
     { label: 'Test Patel', value: 'Test patel' }
   ];
   frequency = [

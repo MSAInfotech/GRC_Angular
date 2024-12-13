@@ -406,7 +406,13 @@
       font-size: 0.9rem;
     }
   }
-  
+
+  @media (max-width: 576px) {
+   
+   .col-xs-4{
+      padding: 0;
+    }
+  }
   /* h6{
     margin: 15px;
   } */
@@ -438,3 +444,13 @@
     margin-left: 65%;
     
   }
+
+  @media (max-width: 575px) {
+    #di {
+        margin-right: 10px;
+    }
+    
+    #di select, #di button {
+        margin-right: 10px;
+    }
+}

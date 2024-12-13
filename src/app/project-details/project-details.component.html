@@ -1,133 +1,126 @@
-<body class="main">
+<div class="container my-2">
+    <!-- Project Details Header -->
 
-    <div class="container my-2">
-        <!-- Project Details Header -->
+    <!-- Project Details Header -->
+    <!-- <div class="d-flex justify-content-between align-items-center mb-2">
+        <h6>Project Details</h6>
+    </div> -->
 
-        <!-- Project Details Header -->
-        <div class="d-flex justify-content-between align-items-center mb-2">
-            <h6>Project Details</h6>
-
-        </div>
-
-        <!-- Project Info -->
-        <div class="card mt-4 mb-5 p-3">
-            <!-- Button and title in the same row inside the card -->
-            <div class="d-flex justify-content-between align-items-center">
+    <!-- Project Info -->
+    <div class="card mt-4 mb-5 p-3 rounded-0">
+        <!-- Button and title in the same row inside the card -->
+        <!-- <div class="d-flex justify-content-between align-items-center">
                 <div class="d-flex">
                     <h6 class="me-3">Details</h6>
                     <h6 (click)="goToProjectControlsView()" style="cursor: pointer;">Controls</h6>
                 </div>
                 <button class="btn btn-success">Export</button>
-            </div>
+            </div> -->
 
 
-            <hr style="margin-top: 10px;">
-            <h6><strong>ISO Project 123</strong> (Standard: ISO/IEC 27001-2:2022)</h6>
-            <p>demo</p>
-        </div>
-        <!-- Overview Section -->
-        <div class="row mt-3 " style="margin-left: 0px;">
-            <h6 class="project-details-heading">Overview</h6>
+        <!-- <hr style="margin-top: 10px;"> -->
+        <h6><strong>ISO Project 123</strong> (Standard: ISO/IEC 27001-2:2022)</h6>
+        <p>demo</p>
+    </div>
+    <!-- Overview Section -->
+    <div class="row mt-3 " style="margin-left: 0px;">
+        <h6 class="project-details-heading">Overview</h6>
+        <!-- Control Status -->
+        <div class="row mt-2 ">
             <!-- Control Status -->
-            <div class="row mt-2 ">
-                <!-- Control Status -->
-                <div class="col-md-6 mb-3">
-                    <div class="overview-card" style="height: 300px; padding: 15px;">
-                        <!-- Heading with left alignment and a border beneath it -->
-                        <h6 class="mt-0" style="text-align: left; padding-bottom: 0px;">Control Status</h6>
-                        <hr style="border: 1px solid #020202; margin: 15px 0 0 0; width: 100%;">
+            <div class="col-md-6 mb-3">
+                <div class="overview-card" style="height: 300px; padding: 15px;">
+                    <!-- Heading with left alignment and a border beneath it -->
+                    <h6 class="mt-0" style="text-align: left; padding-bottom: 0px;">Control Status</h6>
+                    <hr style="border: 1px solid #020202; margin: 15px 0 0 0; width: 100%;">
 
-                        <!-- Container to hold both the status items and values side by side -->
-                        <div style="display: flex; justify-content: center; align-items: flex-start; gap: 20px;">
-                            <!-- List of control status items -->
-                            <ul class="list-unstyled"
-                                style="padding-left: 0; text-align: left; margin: 0; width: fit-content;">
-                                <li style="margin-bottom: 10px; margin-top: 20px;">
-                                    <i class="fa fa-border-all"></i>&nbsp;&nbsp;Total Controls:
-                                </li>
-                                <li style="margin-bottom: 10px;">
-                                    <i class="fas fa-ban"></i>&nbsp;&nbsp; Not Applicable:
-                                </li>
-                                <li style="margin-bottom: 10px;">
-                                    <i class="far fa-flag"></i>&nbsp;&nbsp; Implemented Controls:
-                                </li>
-                                <li style="margin-bottom: 10px;">
-                                    <i class="fa-regular fa-star"></i>&nbsp;&nbsp; Partially Implemented:
-                                </li>
-                                <li style="margin-bottom: 10px;">
-                                    <i class="far fa-times-circle"></i>&nbsp;&nbsp; Not Implemented Controls:
-                                </li>
-                            </ul>
+                    <!-- Container to hold both the status items and values side by side -->
+                    <div style="display: flex; justify-content: center; align-items: flex-start; gap: 20px;">
+                        <!-- List of control status items -->
+                        <ul class="list-unstyled"
+                            style="padding-left: 0; text-align: left; margin: 0; width: fit-content;">
+                            <li style="margin-bottom: 10px; margin-top: 20px;">
+                                <i class="fa fa-border-all"></i>&nbsp;&nbsp;Total Controls:
+                            </li>
+                            <li style="margin-bottom: 10px;">
+                                <i class="fas fa-ban"></i>&nbsp;&nbsp; Not Applicable:
+                            </li>
+                            <li style="margin-bottom: 10px;">
+                                <i class="far fa-flag"></i>&nbsp;&nbsp; Implemented Controls:
+                            </li>
+                            <li style="margin-bottom: 10px;">
+                                <i class="fa-regular fa-star"></i>&nbsp;&nbsp; Partially Implemented:
+                            </li>
+                            <li style="margin-bottom: 10px;">
+                                <i class="far fa-times-circle"></i>&nbsp;&nbsp; Not Implemented Controls:
+                            </li>
+                        </ul>
 
-                            <!-- List of control status values (id="ui2") centered -->
-                            <ul id="ui2" class="list-unstyled"
-                                style="padding-left: 0; text-align: left; margin: 0; width: fit-content;">
-                                <li style="margin-bottom: 10px; margin-top: 19px;">
-                                    <strong>235</strong>
-                                </li>
-                                <li style="margin-bottom: 10px;">
-                                    <strong>0</strong>
-                                </li>
-                                <li style="margin-bottom: 10px;">
-                                    <strong>105</strong>
-                                </li>
-                                <li style="margin-bottom: 10px;">
-                                    <strong>0</strong>
-                                </li>
-                                <li style="margin-bottom: 10px;">
-                                    <strong>130</strong>
-                                </li>
-                            </ul>
-                        </div>
+                        <!-- List of control status values (id="ui2") centered -->
+                        <ul id="ui2" class="list-unstyled"
+                            style="padding-left: 0; text-align: left; margin: 0; width: fit-content;">
+                            <li style="margin-bottom: 10px; margin-top: 19px;">
+                                <strong>235</strong>
+                            </li>
+                            <li style="margin-bottom: 10px;">
+                                <strong>0</strong>
+                            </li>
+                            <li style="margin-bottom: 10px;">
+                                <strong>105</strong>
+                            </li>
+                            <li style="margin-bottom: 10px;">
+                                <strong>0</strong>
+                            </li>
+                            <li style="margin-bottom: 10px;">
+                                <strong>130</strong>
+                            </li>
+                        </ul>
                     </div>
-
                 </div>
 
-                <!-- Implementation Progress -->
-                <div class="col-md-6 mb-3">
-                    <div class="overview-card progress-chart"
-                        style="height: 300px; text-align: center; position: relative;">
-                        <!-- Heading with line -->
-                        <div
-                            style="position: absolute; top: 12px; left: 20px; font-weight: bold; font-size: 12px; width: 100%;">
-                            <h6 style="text-align: left; margin-top: 4px;">Implementation Progress</h6>
-                            <hr style="border: 1px solid #020202; margin-top: 14px; width: 92%;">
-                        </div>
+            </div>
 
-                        <!-- Progress Circle -->
-                        <div class="progre" style="padding-top: 50px; text-align: center;">
-                            <div class="progress-circle1 mx-auto">
+            <!-- Implementation Progress -->
+            <div class="col-md-6 mb-3">
+                <div class="overview-card progress-chart" style="height: 300px; text-align: center; position: relative;">
+                    <!-- Heading with line -->
+                    <div style="position: absolute; top: 12px; left: 20px; font-weight: bold; font-size: 12px; width: 100%; padding-right: 38px;">
+                        <h6 id="txt2" style="text-align: left; margin-top: 4px;">Implementation Progress</h6>
+                        <hr style="border: 1px solid #020202; margin-top: 14px; width: 100%;">
+                    </div>
+                    
+                    <!-- Progress Circle -->
+                    <div class="progre" style="padding-top: 50px; text-align: center;">
+                        <div class="progress-circle-container">
+                            <div class="progress-circle1">
                                 <div class="circle-inner1">235</div>
                             </div>
-                            <div style="display: flex; align-items: center; justify-content: center; margin-top: 15px;">
-                                <h6 style="margin-right: 10px; display: flex; align-items: center;">
-                                    <span class="dot"
-                                        style="background-color: #4caf50; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px;"></span>
-                                    Completion:115
-                                </h6>
-                                <h6 style="display: flex; align-items: center;">
-                                    <span class="dot"
-                                        style="background-color: #a01034; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px;"></span>
-                                    Remaining:120
-                                </h6>
-                            </div>
-
-                            <div style="display: flex; align-items: center; justify-content: center; margin-top: 2px;">
-                                <h6 style="margin-right: 10px; display: flex; align-items: center;">
-                                    <span class="dot"
-                                        style="background-color: #7587ec; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px;"></span>
-                                    Complet:0
-                                </h6>
-                                <h6 style="display: flex; align-items: center;">
-                                    <span class="dot"
-                                        style="background-color: #0a015f; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px;"></span>
-                                    Remain:0
-                                </h6>
-                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
+                        
+                        <div style="display: flex; align-items: center; justify-content: center; margin-top: 15px;">
+                            <h6 class="txt" style="margin-right: 10px; display: flex; align-items: center;">
+                                <span class="dot" style="background-color: #4caf50; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px;"></span>
+                                Completion:115
+                            </h6>
+                            <h6 class="txt" style="display: flex; align-items: center;">
+                                <span class="dot" style="background-color: #a01034; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px;"></span>
+                                Remaining:120
+                            </h6>
+                        </div>
+            
+                        <div style="display: flex; align-items: center; justify-content: center; margin-top: 2px;">
+                            <h6 class="txt" style="margin-right: 10px; display: flex; align-items: center;">
+                                <span class="dot" style="background-color: #7587ec; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px;"></span>
+                                Complet:0
+                            </h6>
+                            <h6 class="txt" style="display: flex; align-items: center;">
+                                <span class="dot" style="background-color: #0a015f; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px;"></span>
+                                Remain:0
+                            </h6>
+                        </div>
+                  </div>    
+           </div>
+          </div>
         </div>
     </div>
-</body>
+</div>
