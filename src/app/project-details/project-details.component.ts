@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-project-details',
@@ -10,4 +10,11 @@ import { RouterModule } from '@angular/router';
 })
 export class ProjectDetailsComponent {
 
+  constructor(private router: Router) {
+
+  }
+
+  goToProjectControlsView() {
+     this.router.navigate(['/project-controls-view']);
+  }
 }
