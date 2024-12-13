@@ -38,6 +38,13 @@
     pointer-events: none;
 }
 
+.btn-success {
+  border-radius: none;
+  outline: none;
+  border: none;
+
+}
+
 .dropdown-box {
     display: flex;
     align-items: center;
