@@ -1,7 +1,38 @@
 .dropdown-item:hover {
-    background-color: #007bff; /* Primary blue */
-    color: #ffffff; /* White text */
+  background-color: #007bff;
+  /* Primary blue */
+  color: #ffffff;
+  /* White text */
 }
+
 .card-dropdown {
-    background-color: rgba(0,0,0,.03); /* Set default text color */
+  background-color: rgba(0, 0, 0, .03);
+  /* Set default text color */
+}
+
+/* Custom full-screen dialog styles */
+::ng-deep .full-screen-dialog .mat-dialog-container {
+  width: 100vw !important;
+  height: 100vh !important;
+  margin: 0 !important;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+}
+
+::ng-deep .full-screen-dialog .mat-dialog-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  max-height: calc(100vh - 64px);
+  /* Adjust for header/footer heights */
+}
+
+::ng-deep .mat-mdc-dialog-surface {
+  background-color: white !important
+}
+
+::ng-deep .mat-mdc-dialog-surface {
+  border-radius: 0px !important;
 }

@@ -1,172 +1,90 @@
 /* General Styles */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f7fafc;
-  margin: 0;
-  padding: 0;
-}
-
 .dashboard-container {
-  max-width: 1519.2px;
-  margin: 20px auto;
-  padding-left: 6%;
-  padding-right: 6%;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem;
-}
-
-main {
-  padding: 2rem 0;
-}
-
-.form-container {
-  background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 0.5rem;
-  padding: 2rem;
-}
-
-.form-header {
+  max-width: 100%;
+  height: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
+  flex-direction: column;
+  margin-top: 5px;
 }
 
-.form-header h1 {
-  margin: 0;
-  font-size: 1.5rem;
-  text-align: left;
+/* Close Button */
+.close-button {
+  font-size: 25px;
+  color: red;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 /* Tabs Styling */
-.tabs {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 1rem;
-  border-bottom: 2px solid #e2e8f0;
-}
-
-.tabs button {
-  flex: 1;
-  padding: 10px 20px;
-  background-color: #edf2f7;
-  border: none;
-  text-align: center;
-  font-size: 1rem;
+.btn-custom-tab {
+  background-color: #b7b4d8;
+  color: white;
   font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  border-radius: 0%;
 }
 
-.tabs button.active {
+.btn-custom-tab.active {
+  background-color: #63b3ed;
+}
+
+.btn-custom-primary {
   background-color: #63b3ed;
   color: white;
+  border: none;
+}
+.progress {
+  height: 10px;
 }
 
-.tabs button:disabled {
-  background-color: #ddd;
-  cursor: not-allowed;
-  color: #aaa;
-}
-
-/* Progress Bar */
 .progress-bar {
-  background-color: #e2e8f0;
-  border-radius: 0.5rem;
-  height: 5px;
-  margin: 1rem 0 30px;
-  overflow: hidden;
-  position: relative;
-}
-
-.progress-bar .progress {
   background-color: #63b3ed;
   height: 100%;
-  width: 0;
-  transition: width 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .progress {
+    height: 5px; /* Smaller on small screens */
+  }
+}
+
+.btn-custom-primary:hover {
+  background-color: #46a7ec;
+}
+
+/* Required Fields */
+.required {
+  color: red;
 }
 
 /* Form Group */
-.form-group {
+.form-group.row {
   display: flex;
   align-items: center;
-  margin-bottom: 1rem;
 }
 
 .form-group label {
-  flex: 0 0 25%;
-  font-weight: bold;
-  color: #4a5568;
+  text-align: left;
 }
 
-.form-group input,
-.form-group textarea,
-.form-group select {
-  flex: 1;
-  padding: 0.5rem;
-  border: 1px solid #e2e8f0;
-  border-radius: 0.25rem;
+.form-group .col-sm-9 {
+  padding-left: 0;
 }
 
-/* Form Actions */
-.form-actions {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 1.5rem;
+/* Form Inputs */
+.form-group .form-control,
+.form-group .form-select,
+.form-group textarea {
+  width: 100%;
 }
 
-.form-actions button {
-  background-color: #63b3ed;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+/* Top Padding for Form */
+.form-container {
+  padding-top: 20px; /* Added padding to make header visible */
+  overflow-y: auto;
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none;
 }
-
-.form-actions button:hover {
-  background-color: #4299e1;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .tabs {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .tabs button {
-    margin-bottom: 0.5rem;
-    width: 100%;
-  }
-
-  .form-container {
-    padding: 1rem;
-  }
-
-  .form-group {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .form-group label {
-    flex: 0 0 auto;
-    margin-bottom: 0.5rem;
-  }
-
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
-    width: 100%;
-  }
-
-  .form-actions {
-    justify-content: center;
-  }
+.form-container::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Edge */
 }
