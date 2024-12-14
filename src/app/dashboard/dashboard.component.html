@@ -10,7 +10,7 @@
     <div class="row ms-0 mb-3 align-items-center justify-content-between col-lg-12 col-md-12 col-sm-12">
       <!-- Left Content -->
       <div class="text-start col-lg-6 col-md-6 col-sm-12 p-0">
-        <h6>Current Overview: All Projects</h6>
+        <h6 class="font-bold">Current Overview: All Projects</h6>
       </div>
 
       <!-- Right Content -->
@@ -114,9 +114,9 @@
 
   <!-- Task Monitor -->
   <div class="row dashboard-container w-100 justify-content-between">
-    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 p-0 mb-2">
+    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 p-0 mb-0">
       <div class="card justify-content-between">
-        <div class="card-title">Task Monitor</div>
+        <div class="card-title font-bold">Task Monitor</div>
         <div class="row w-100">
           <div class="col-lg-8 col-md-6 col-sm-12 col-xs-12">
             <div class="chart-container">
@@ -148,10 +148,10 @@
         </div>
       </div>
     </div>
-
-    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 pe-0">
-      <div class="card">
-        <h5 class="card-title">Implementation Progress</h5>
+ 
+    <div id="box2" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 pe-0" >
+      <div class="card" style="height: 100%;">
+        <h5 class="card-title font-bold">Implementation Progress</h5>
         <p-chart type="doughnut" [data]="data" [options]="optionset"></p-chart>
       </div>
     </div>
@@ -183,7 +183,7 @@
     <div class="col-12">
       <div class="card p-3">
         <div class="d-flex align-items-center justify-content-between flex-wrap">
-          <h6 class="d-flex align-items-center mb-0">
+          <h6 class="d-flex align-items-center font-bold mb-0">
             <i class="fa fa-calendar-alt me-2"></i> Task Calendar - <span class="ms-2">{{ currentYear }}</span>
           </h6>
           <div class="d-flex align-items-center flex-wrap mt-2 mt-md-0">

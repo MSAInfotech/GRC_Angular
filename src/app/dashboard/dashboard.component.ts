@@ -30,7 +30,7 @@ export class DashboardComponent implements OnInit {
     };
 
     isModalOpen: boolean = false;
-    selectedDate: Date | null = null;
+    selectedDate?: Date | null;
     newEvent: string = '';
     platformId = inject(PLATFORM_ID);
     constructor(private cd: ChangeDetectorRef) {

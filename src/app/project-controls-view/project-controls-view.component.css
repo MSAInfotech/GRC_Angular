@@ -72,3 +72,13 @@ margin-top: 2%;
 ::ng-deep  .p-card-body{
   padding: 0  !important;
 }
+
+@media (max-width:500px){
+  .saveExportbtn {
+      display: contents !important;
+  } 
+  .saveExport{
+    margin-top: 4%;
+
+  }
+}

@@ -1,16 +1,22 @@
 <div class="project-detail">
-    <h6>Project Details</h6>
+    <h6 class="font-bold">Project Details</h6>
 </div>
 <div class="project-detail">
-    <p-tabView>
-        <!-- Details Tab with Custom Header -->
-        <p-tabPanel header="Datails" >
-            <app-project-details></app-project-details>
-        </p-tabPanel>
+    <p-tabs value="0">
+        <p-tablist>
+            <p-tab value="0">Details</p-tab>
+            <p-tab value="1">Controls</p-tab>
+        </p-tablist>
+        <p-tabpanels>
+            <!-- Details Tab with Custom Header -->
+            <p-tabpanel value="0">
+                <app-project-details></app-project-details>
+            </p-tabpanel>
 
-        <!-- Controls Tab -->
-        <p-tabPanel header="Controls">
-            <app-project-controls-view></app-project-controls-view>
-        </p-tabPanel>
-    </p-tabView>
+            <!-- Controls Tab -->
+            <p-tabpanel value="1">
+                <app-project-controls-view></app-project-controls-view>
+            </p-tabpanel>
+        </p-tabpanels>
+    </p-tabs>
 </div>

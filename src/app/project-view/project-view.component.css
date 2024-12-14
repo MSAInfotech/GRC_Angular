@@ -1,29 +1,41 @@
 .dropdown-item:hover {
-    background-color: #007bff; /* Primary blue */
-    color: #ffffff; /* White text */
+    background-color: #007bff;
+    /* Primary blue */
+    color: #ffffff;
+    /* White text */
 }
+
 .card-dropdown {
-    background-color: rgba(0,0,0,.03); /* Set default text color */
-}/* Card Styling for Same Height */
+    background-color: rgba(0, 0, 0, .03);
+    /* Set default text color */
+}
+
+/* Card Styling for Same Height */
 .card {
     height: 100%;
     /* Ensures equal height */
     display: flex;
     flex-direction: column;
 }
-.progress{
-    height: 4%; 
+
+.progress {
+    height: 4%;
 }
-.progress-bar{
+
+.progress-bar {
     background-color: #495057;
 }
-.input-group-text{
+
+.input-group-text {
     padding: 0.6rem 0.75rem;
 }
-.import-export{
+
+.import-export {
     border-radius: 5px;
     background-color: #495057;
+    cursor: pointer;
 }
+
 .plus-box {
     font-size: 100px;
     width: 100px;

@@ -9,9 +9,9 @@
             [globalFilterFields]="['controliD', 'name', 'description', 'status', 'automation', 'responsible', 'approver', 'deadline', 'frequency', 'linkedRisk']">
 
             <ng-template pTemplate="caption">
-                <div class="d-flex justify-content-between">
+                <div class="d-flex justify-content-between saveExportbtn">
                     <div class="justify-content-start pe-2">
-                        <p-iconfield iconPosition="left" class="ml-auto">
+                        <p-iconfield iconPosition="left">
                             <p-inputicon>
                                 <i class="pi pi-search"></i>
                             </p-inputicon>
@@ -20,9 +20,9 @@
                                 placeholder="Search keyword" />
                         </p-iconfield>
                     </div>
-                    <div class="justify-content-end">
-                        <button class="btn btn-success mx-2">Save</button> 
-                            <button class="btn btn-success ms-2">Export</button>
+                    <div class="justify-content-end saveExport">
+                        <button class="btn btn-success mx-2">Save</button>
+                        <button class="btn btn-success ms-2">Export</button>
                     </div>
                 </div>
             </ng-template>
@@ -87,14 +87,22 @@
                     <td>{{projectControlInfo.automation}}</td>
 
                     <td>
-                        <p-dropdown [options]="responsible" [panelStyle]="{ width: '100%' }"
+                        <!-- <p-dropdown [options]="responsible" [panelStyle]="{ width: '100%' }"
                             [(ngModel)]="projectControlInfo.responsible" placeholder="Select"
-                            [style]="{ width: '150px' }" [appendTo]="'body'"></p-dropdown>
+                            [style]="{ width: '150px' }" [appendTo]="'body'"></p-dropdown> -->
+
+                        <p-select [options]="responsible" [(ngModel)]="projectControlInfo.responsible"
+                            [panelStyle]="{ width: '100%' }" [appendTo]="'body'" [style]="{ width: '150px' }"
+                            placeholder="Select" />
+
                     </td>
                     <td>
-                        <p-dropdown [options]="approverOptions" [panelStyle]="{ width: '100%' }"
+                        <!-- <p-dropdown [options]="approverOptions" [panelStyle]="{ width: '100%' }"
                             [(ngModel)]="projectControlInfo.approver" placeholder="Select" [style]="{ width: '150px' }"
-                            [appendTo]="'body'"></p-dropdown>
+                            [appendTo]="'body'"></p-dropdown> -->
+                        <p-select [options]="approverOptions" [(ngModel)]="projectControlInfo.approver"
+                            [panelStyle]="{ width: '100%' }" [appendTo]="'body'" [style]="{ width: '150px' }"
+                            placeholder="Select" />
                     </td>
 
                     <td style="width: 20%;">
@@ -103,9 +111,12 @@
                     </td>
                     <!-- <td>{{ContactInfo.frequency}}</td> -->
                     <td>
-                        <p-dropdown [options]="frequency" [panelStyle]="{ width: '100%' }" [appendTo]="'body'"
+                        <!-- <p-dropdown [options]="frequency" [panelStyle]="{ width: '100%' }" [appendTo]="'body'"
                             [(ngModel)]="projectControlInfo.frequency" placeholder="Select"
-                            [style]="{ width: '130px' }"></p-dropdown>
+                            [style]="{ width: '130px' }"></p-dropdown> -->
+                        <p-select [options]="frequency" [(ngModel)]="projectControlInfo.frequency"
+                            [panelStyle]="{ width: '100%' }" [appendTo]="'body'" [style]="{ width: '150px' }"
+                            placeholder="Select" />
                     </td>
 
                     <td>{{projectControlInfo.linkedRisk}}</td>
