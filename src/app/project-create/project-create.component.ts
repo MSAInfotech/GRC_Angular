@@ -2,19 +2,25 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { MessageService } from 'primeng/api';
+import { Toast } from 'primeng/toast';
 
 @Component({
   selector: 'app-project-create',
   standalone: true,
-  imports: [CommonModule,FormsModule, RouterModule],
+  imports: [CommonModule, FormsModule, RouterModule, Toast],
   templateUrl: './project-create.component.html',
-  styleUrl: './project-create.component.css'
+  styleUrl: './project-create.component.css',
+  providers: [MessageService]
 })
 export class ProjectCreateComponent {
   currentTab: string = 'details';
   isFinishTabEnabled: boolean = false;
   progress: number = 0;
 
+  constructor(private messageService: MessageService) {
+
+  }
   formData = {
     projectName: '',
     description: '',
@@ -41,11 +47,11 @@ export class ProjectCreateComponent {
       this.isFinishTabEnabled = true;
       this.switchTab('finish');
     } else {
-      alert('Please fill out all required fields.');
+      this.messageService.add({ severity: 'warn', summary: 'Warn', detail: 'Please fill out all required fields.' });
     }
   }
 
   onFinish() {
-    alert('Project Finished!');
+    this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Project Finished!' });
   }
 }

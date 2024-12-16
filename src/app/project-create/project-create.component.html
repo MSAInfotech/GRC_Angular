@@ -1,9 +1,9 @@
 <main>
   <div class="dashboard-container">
-    <div class="form-header">
+    <!-- <div class="form-header">
       <h6 class="font-bold">Create Compliance Project</h6>
-    </div>
-    <div class="form-container">
+    </div> -->
+    <div class>
       
 
       <!-- Tab Navigation -->
@@ -75,9 +75,9 @@
             <select 
               id="mapToProject" 
               [(ngModel)]="formData.mapToProject" 
-              name="mapToProject" 
+              name="mapToProject"
               (change)="updateProgressBar()">
-              <option value="Choose existing project">Choose existing project</option>
+              <option value="" disabled selected>Choose existing project</option>
               <option value="Option 1">Option 1</option>
               <option value="Option 2">Option 2</option>
             </select>
@@ -115,3 +115,4 @@
     </div>
   </div>
 </main>
+<p-toast/>

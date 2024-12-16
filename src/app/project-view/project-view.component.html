@@ -26,12 +26,19 @@
             </div>
         </div>
         <div class="row mt-0 gy-4">
-            <div class="col-md-4">
+            <!-- <div class="col-md-4">
                 <div class="card shadow-sm d-flex justify-content-center align-items-center">
                     <div class="plus-box"><a routerLink="/project-create"
                             class="text-decoration-none">+</a></div>
                 </div>
-            </div>
+            </div> -->
+            <div class="col-md-4">
+                <div class="card shadow-sm d-flex justify-content-center align-items-center">
+                  <div class="plus-box">
+                    <a (click)="showDialog()" class="text-decoration-none" style="cursor: pointer;">+</a>
+                  </div>
+                </div>
+              </div>
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-header">
@@ -257,3 +264,7 @@
             </div>
         </div>
     </div>
+
+    <p-dialog [(visible)]="display" header="Create Compliance Project" [modal]="true" [style]="{ width: '90%' }">
+        <app-project-create></app-project-create>
+    </p-dialog>

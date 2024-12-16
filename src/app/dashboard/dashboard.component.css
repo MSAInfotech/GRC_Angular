@@ -465,6 +465,7 @@
   .col-lg-8, .col-lg-4 {
       flex: 0 0 100%;
       max-width: 100%;
+      padding-left: 30px;
   }
 }
 
@@ -472,6 +473,11 @@
   .chart-container {
       flex-direction: column;
   }
+
+  .col-lg-8, .col-lg-4 {
+    padding: 0;
+    padding-left: 10px;
+}
 
   .chart-percentage {
       font-size: 18px;

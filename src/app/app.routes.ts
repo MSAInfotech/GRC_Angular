@@ -9,7 +9,7 @@ import { TabBarComponent } from './tab-bar/tab-bar.component';
 export const routes: Routes = [
     { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
     { path: 'dashboard', component: DashboardComponent },
-    { path: 'project-create', component: ProjectCreateComponent },
+    // { path: 'project-create', component: ProjectCreateComponent },
     // { path: 'project-details', component: ProjectDetailsComponent },
     // { path: 'project-controls-view', component: ProjectControlsViewComponent },
     { path: 'project-view', component: ProjectViewComponent },
