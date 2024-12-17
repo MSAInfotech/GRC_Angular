@@ -93,7 +93,23 @@
 
                         <p-select [options]="responsible" [(ngModel)]="projectControlInfo.responsible"
                             [panelStyle]="{ width: '100%' }" [appendTo]="'body'" [style]="{ width: '150px' }"
-                            placeholder="Select" />
+                            placeholder="Select">
+
+                            <ng-template #selectedItem let-responsible>
+                                <div class="flex items-center gap-2">
+                                    <i [class]="responsible.icon" style="margin-right: 8px;"></i>
+                                    <div>{{ responsible.label }}</div>
+                                </div>
+                            </ng-template>
+
+                            <ng-template let-responsible #item>
+                                <div class="flex items-center gap-2">
+                                    <i [class]="responsible.icon" style="margin-right: 8px;"></i>
+                                    <div>{{ responsible.label }}</div>
+                                </div>
+                            </ng-template>
+
+                        </p-select>
 
                     </td>
                     <td>

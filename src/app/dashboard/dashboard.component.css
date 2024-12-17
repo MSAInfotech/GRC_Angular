@@ -294,18 +294,6 @@
     }
 }
 
-@media (max-width: 576px) {
-    .task-list li {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .go-btn {
-        margin-top: 5px;
-        align-self: flex-end;
-    }
-}
-
 .calendar-table {
     width: 100%;
     border-collapse: collapse;
@@ -465,7 +453,7 @@
   .col-lg-8, .col-lg-4 {
       flex: 0 0 100%;
       max-width: 100%;
-      padding-left: 30px;
+      padding-left: 33px;
   }
 }
 
@@ -476,7 +464,7 @@
 
   .col-lg-8, .col-lg-4 {
     padding: 0;
-    padding-left: 10px;
+    padding-left: 15px;
 }
 
   .chart-percentage {
@@ -498,11 +486,6 @@
       flex-direction: column;
   }
 
-  .col-lg-8, .col-lg-4 {
-      padding: 0;
-      padding-left: 0;
-  }
-
   .card {
       margin-bottom: 16px;
       
@@ -513,12 +496,12 @@
   }
 
   .task-list li {
-      flex-direction: column;
+       
       align-items: flex-start;
   }
 
   .go-btn {
-      margin-top: 4px;
+      margin-top: 0;
   }
 
   #box2{
@@ -533,4 +516,16 @@
       padding-left: 0;
      
   }
+}
+
+@media (max-width: 270px) {
+
+    .task-list li {
+       flex-direction: column;
+        align-items: flex-start;
+    }
+    .go-btn {
+        margin-top: 5px;
+        align-self: flex-end;
+    }
 }

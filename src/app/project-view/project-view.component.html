@@ -35,7 +35,7 @@
             <div class="col-md-4">
                 <div class="card shadow-sm d-flex justify-content-center align-items-center">
                   <div class="plus-box">
-                    <a (click)="showDialog()" class="text-decoration-none" style="cursor: pointer;">+</a>
+                    <a (click)="showDialog()" class="text-decoration-none" style="cursor: pointer;color: #6c757d;">+</a>
                   </div>
                 </div>
               </div>
@@ -265,6 +265,6 @@
         </div>
     </div>
 
-    <p-dialog [(visible)]="display" header="Create Compliance Project" [modal]="true" [style]="{ width: '90%' }">
+    <p-dialog [(visible)]="display" header="Create Compliance Project" [blockScroll]="false" [modal]="true" [style]="{ width: '90%' }">
         <app-project-create></app-project-create>
     </p-dialog>

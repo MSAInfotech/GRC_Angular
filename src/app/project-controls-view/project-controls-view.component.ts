@@ -101,9 +101,9 @@ export class ProjectControlsViewComponent {
     { label: 'Test Patel', value: 'Test patel' }
   ];
   responsible = [
-    { label: 'Jay Patel', value: 'Jay patel' },
-    { label: 'Hitesh Patel', value: 'Hitesh patel' },
-    { label: 'Test Patel', value: 'Test patel' }
+    { label: 'Jay Patel', value: 'Jay patel', icon: 'pi pi-user'  },
+    { label: 'Hitesh Patel', value: 'Hitesh patel', icon: 'pi pi-user'  },
+    { label: 'Test Patel', value: 'Test patel', icon: 'pi pi-user'  }
   ];
   frequency = [
     { label: 'Daily', value: 'Daily' },

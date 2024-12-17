@@ -50,7 +50,6 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-
 .sub-header {
     background-color: #495057;
 }
@@ -76,12 +75,64 @@
     text-align: start;
 }
 
+@media (max-width: 991px) {
+    #profileDropdownText {
+        display: none;
+    }
+
+    .dropdown-item:hover {
+        color: #495057;
+        background-color: #eb812b !important;
+    }
+
+    .fas.fa-chevron-right.open {
+        transform: rotate(90deg);
+    }
+}
+
 @media (max-width: 768px) {
-    .navbar .dropdown-menu {
-        width: 100%;
-        position: static;
+    .nav-item .dropdown-menu {
+        display: none;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        opacity: 0;
+        transform: scaleY(0);
+        height: 0;
+        overflow: hidden;
+    }
+    
+    .nav-item .dropdown-menu.show {
+        display: block !important;
+        opacity: 1;
+        transform: scaleY(1);
+        height: auto;
+    }
+    
+    .fas.fa-chevron-right.open {
+        transform: rotate(90deg);
+    }
+
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: none;
         margin-top: 0;
-        text-align: center;
+        min-width: fit-content;
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+        min-width: fit-content;
+        width: 100%;
+    }
+  
+    :host ::ng-deep .offcanvas-backdrop {
+        opacity: 0 !important;
+      }
+
+    .show {
+        visibility: hidden;
     }
 }
 
@@ -90,6 +141,7 @@
     font-size: 12px;
     transition: all 0.3s ease;
     padding: 8px 12px;
+    font-weight: bold;
 }
 
 .collapse {
@@ -112,28 +164,16 @@
     color: #fff;
 }
 
-.nav-item.dropdown:hover .dropdown-menu {
-    display: block;
-    margin-top: 0;
-    min-width: fit-content;
-    width: auto;
-    /* animation: fadeIn 0.3s; */
-}
-
-/* @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-  } */
-
 .navbar-toggler {
     border: none;
     outline: none;
 }
 
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+.offcanvas-start {
+    width: 255px !important;
+    background-color: #495057;  
+}
+
+.offcanvas-header {
+    background-color: #ffffff;
 }

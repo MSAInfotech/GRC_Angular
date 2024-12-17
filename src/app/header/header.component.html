@@ -3,9 +3,8 @@
         <div class="d-flex align-items-center justify-content-between">
             <!-- Logo and Title -->
             <div class="d-flex align-items-center">
-                <img src="assets/Infintum-icon.jpg"
-                    class="logo-img me-2">
-                <h1 class="mb-0 fw-bold">INFINTUM GRC</h1>
+                <img src="assets/Infintum-icon.jpg" routerLink="/dashboard" style="cursor: pointer;" class="logo-img me-2">
+                <h1 class="mb-0 fw-bold" routerLink="/dashboard" style="cursor: pointer;">INFINTUM GRC</h1>
             </div>
 
             <!-- Icons and Profile -->
@@ -16,13 +15,13 @@
                 </div>
                 <!-- Profile Dropdown -->
                 <div class="profile dropdown d-flex">
-                    <img src="https://storage.googleapis.com/a1aa/image/eev0WWGJiOsmT0tBxzYFA2tlcxPgkRizWZhExlxDmJTlyd5TA.jpg"
-                        alt="Profile Picture" id="profileDropdown" class="rounded-circle me-2" data-bs-toggle="dropdown"
+                    <img src="assets/ProfileIcon.jpg"
+                        alt="Profile Picture" id="profileDropdown" class="rounded-circle me-2 align-content-center" data-bs-toggle="dropdown"
                         aria-expanded="false">
                     <!-- User Name -->
-                    <span class="fw-medium text-muted dropdown-toggle" id="profileDropdownText"
+                    <span class="fw-medium text-muted dropdown-toggle align-content-center profileDropdownText" id="profileDropdownText"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        Paulo Alves
+                        Bilal Ahmed
                     </span>
                     <ul class="dropdown-menu dropdown-menu-end rounded-1" aria-labelledby="profileDropdown">
                         <li><a class="dropdown-item">Profile</a></li>
@@ -45,18 +44,19 @@
         <nav class="navbar navbar-expand-lg navbar-dark px-4 w-100">
             <div class="container-fluid">
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <!-- Sidebar Toggle Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar"
+                    aria-controls="mobileSidebar" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars text-white"></i>
                 </button>
                 <!-- Navbar Items -->
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex" id="navbarNav">
                     <ul class="navbar-nav d-flex flex-wrap justify-content-center w-100">
                         <!-- Global Dashboards -->
                         <li class="nav-item dropdown text-center mx-3">
                             <a routerLink="/dashboard"
                                 class="nav-link d-flex flex-column align-items-center text-decoration-none"
-                                role="button" data-bs-toggle="dropdown">
+                                role="button">
                                 <i class="fas fa-chart-line mb-1"></i> <!-- Icon -->
                                 <span>Global Dashboards</span> <!-- Text -->
                             </a>
@@ -64,7 +64,7 @@
                         <!-- Compliance -->
                         <li class="nav-item dropdown text-center mx-3">
                             <a class="nav-link d-flex flex-column align-items-center text-decoration-none"
-                                id="complianceDropdown" role="button" data-bs-toggle="dropdown">
+                                id="complianceDropdown" role="button">
                                 <i class="fas fa-shield-alt mb-1"></i>
                                 <span>Compliance</span>
                             </a>
@@ -73,11 +73,11 @@
                                 <li><a class="dropdown-item">Audit Logs</a></li>
                             </ul>
                         </li>
-                         
+
                         <!-- Policy Management -->
                         <li class="nav-item dropdown text-center mx-3">
                             <a class="nav-link d-flex flex-column align-items-center text-decoration-none"
-                                id="policyDropdown" role="button" data-bs-toggle="dropdown">
+                                id="policyDropdown" role="button">
                                 <i class="fas fa-file-alt mb-1"></i>
                                 <span>Policy Management</span>
                             </a>
@@ -89,8 +89,8 @@
 
                         <!-- Risk Management -->
                         <li class="nav-item dropdown text-center mx-3">
-                            <a class="nav-link d-flex flex-column align-items-center text-decoration-none" href="#"
-                                id="riskDropdown" role="button" data-bs-toggle="dropdown">
+                            <a class="nav-link d-flex flex-column align-items-center text-decoration-none"
+                                id="riskDropdown" role="button">
                                 <i class="fas fa-exclamation-triangle mb-1"></i>
                                 <span>Risk Management</span>
                             </a>
@@ -102,8 +102,8 @@
 
                         <!-- Third Party Risk -->
                         <li class="nav-item dropdown text-center mx-3">
-                            <a class="nav-link d-flex flex-column align-items-center text-decoration-none" href="#"
-                                id="thirdPartyDropdown" role="button" data-bs-toggle="dropdown">
+                            <a class="nav-link d-flex flex-column align-items-center text-decoration-none"
+                                id="thirdPartyDropdown" role="button">
                                 <i class="fas fa-handshake mb-1"></i>
                                 <span>Third Party Risk</span>
                             </a>
@@ -115,8 +115,8 @@
 
                         <!-- Asset Management -->
                         <li class="nav-item dropdown text-center mx-3">
-                            <a class="nav-link d-flex flex-column align-items-center text-decoration-none" href="#"
-                                id="assetManagement" role="button" data-bs-toggle="dropdown">
+                            <a class="nav-link d-flex flex-column align-items-center text-decoration-none"
+                                id="assetManagement" role="button">
                                 <i class="fas fa-box mb-1"></i>
                                 <span>Asset Management</span>
                             </a>
@@ -128,8 +128,8 @@
 
                         <!-- Vulnerability Management -->
                         <li class="nav-item dropdown text-center mx-3">
-                            <a class="nav-link d-flex flex-column align-items-center text-decoration-none" href="#"
-                                id="vulnerabilityManagement" role="button" data-bs-toggle="dropdown">
+                            <a class="nav-link d-flex flex-column align-items-center text-decoration-none"
+                                id="vulnerabilityManagement" role="button">
                                 <i class="fas fa-shield-alt mb-1"></i>
                                 <span>Vulnerability Management</span>
                             </a>
@@ -141,8 +141,8 @@
 
                         <!-- Controls -->
                         <li class="nav-item dropdown text-center mx-3">
-                            <a class="nav-link d-flex flex-column align-items-center text-decoration-none" href="#"
-                                id="controls" role="button" data-bs-toggle="dropdown">
+                            <a class="nav-link d-flex flex-column align-items-center text-decoration-none" 
+                                id="controls" role="button">
                                 <i class="fas fa-th mb-1"></i>
                                 <span>Controls</span>
                             </a>
@@ -154,8 +154,8 @@
 
                         <!-- Administration -->
                         <li class="nav-item dropdown text-center mx-3">
-                            <a class="nav-link d-flex flex-column align-items-center text-decoration-none" href="#"
-                                id="administration" role="button" data-bs-toggle="dropdown">
+                            <a class="nav-link d-flex flex-column align-items-center text-decoration-none"
+                                id="administration" role="button">
                                 <i class="fas fa-user-cog mb-1"></i>
                                 <span>Administration</span>
                             </a>
@@ -169,5 +169,246 @@
                 </div>
             </div>
         </nav>
+        <!-- Sidebar for Mobile -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileSidebar" aria-labelledby="mobileSidebarLabel">
+            <div class="offcanvas-header py-1">
+                <h5 class="offcanvas-title" id="mobileSidebarLabel">Menu</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav d-flex flex-column text-dark">
+                    <!-- Global Dashboards -->
+                    <!-- <li class="nav-item dropdown text-center mx-3">
+                        <a routerLink="/dashboard"
+                            class="nav-link d-flex flex-column align-items-center text-decoration-none"
+                            role="button">
+                            <i class="fas fa-chart-line mb-1"></i> 
+                            <span>Global Dashboards</span> 
+                        </a>
+                    </li> -->
+                    <li class="nav-item dropdown mx-3 position-relative">
+                        <a routerLink="/dashboard" class="nav-link text-decoration-none d-flex justify-content-between align-items-center" role="button">
+                            <span class="d-flex align-items-center">
+                                <i class="fas fa-chart-line mb-1 me-2"></i>
+                                Global Dashboards
+                            </span>
+                        </a>
+                    </li>
+                    <!-- Compliance -->
+                    <!-- <li class="nav-item dropdown text-center mx-3">
+                        <a class="nav-link d-flex flex-column align-items-center text-decoration-none"
+                            id="complianceDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-shield-alt mb-1"></i>
+                            <span>Compliance</span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="complianceDropdown">
+                            <li><a routerLink="/project-view" class="dropdown-item">Project</a></li>
+                            <li><a class="dropdown-item">Audit Logs</a></li>
+                        </ul>
+                    </li> -->
+                    <li class="nav-item dropdown mx-3 position-relative">
+                        <a class="nav-link text-decoration-none d-flex justify-content-between align-items-center" id="complianceDropdown" role="button" (click)="toggleDropdown('compliance')">
+                            <span class="d-flex align-items-center">
+                                <i class="fas fa-shield-alt mb-1 me-2"></i>
+                                Compliance
+                            </span>
+                            <i class="fas fa-chevron-right" [ngClass]="{'open': isDropdownOpen === 'compliance'}"></i>
+                        </a>
+                        <ul class="dropdown-menu" [ngClass]="{'show': isDropdownOpen === 'compliance'}" aria-labelledby="complianceDropdown">
+                            <li><a routerLink="/project-view" class="dropdown-item">Project</a></li>
+                            <li><a class="dropdown-item">Audit Logs</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Policy Management -->
+                    <!-- <li class="nav-item dropdown text-center mx-3">
+                        <a class="nav-link d-flex flex-column align-items-center text-decoration-none"
+                            id="policyDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-file-alt mb-1"></i>
+                            <span>Policy Management</span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="policyDropdown">
+                            <li><a class="dropdown-item">Policy List</a></li>
+                            <li><a class="dropdown-item">Policy Updates</a></li>
+                        </ul>
+                    </li> -->
+                    <li class="nav-item dropdown mx-3 position-relative">
+                        <a class="nav-link text-decoration-none d-flex justify-content-between align-items-center" id="policyDropdown" role="button" (click)="toggleDropdown('policy')">
+                            <span class="d-flex align-items-center">
+                                <i class="fas fa-file-alt mb-1 me-2"></i>
+                                Policy Management
+                            </span>
+                            <i class="fas fa-chevron-right" [ngClass]="{'open': isDropdownOpen === 'policy'}"></i>
+                        </a>
+                        <ul class="dropdown-menu" [ngClass]="{'show': isDropdownOpen === 'policy'}" aria-labelledby="policyDropdown">
+                            <li><a class="dropdown-item">Policy List</a></li>
+                            <li><a class="dropdown-item">Policy Updates</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Risk Management -->
+                    <!-- <li class="nav-item dropdown text-center mx-3">
+                        <a class="nav-link d-flex flex-column align-items-center text-decoration-none" href="#"
+                            id="riskDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-exclamation-triangle mb-1"></i>
+                            <span>Risk Management</span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="riskDropdown">
+                            <li><a class="dropdown-item">Risk Assessment</a></li>
+                            <li><a class="dropdown-item">Risk Reports</a></li>
+                        </ul>
+                    </li> -->
+                    <li class="nav-item dropdown mx-3">
+                        <a class="nav-link text-decoration-none d-flex justify-content-between align-items-center"
+                         id="riskDropdown" role="button" (click)="toggleDropdown('risk')">
+                            <span class="d-flex align-items-center">
+                                <i class="fas fa-exclamation-triangle mb-1 me-2"></i>
+                                Risk Management
+                            </span>
+                            <i class="fas fa-chevron-right" [ngClass]="{'open': isDropdownOpen === 'risk'}"></i>
+                        </a>
+                        <ul class="dropdown-menu" [ngClass]="{'show': isDropdownOpen === 'risk'}" aria-labelledby="riskDropdown">
+                            <li><a class="dropdown-item">Risk Assessment</a></li>
+                            <li><a class="dropdown-item">Risk Reports</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Third Party Risk -->
+                    <!-- <li class="nav-item dropdown text-center mx-3">
+                        <a class="nav-link d-flex flex-column align-items-center text-decoration-none" href="#"
+                            id="thirdPartyDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-handshake mb-1"></i>
+                            <span>Third Party Risk</span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="thirdPartyDropdown">
+                            <li><a class="dropdown-item">Vendor List</a></li>
+                            <li><a class="dropdown-item">Vendor Assessment</a></li>
+                        </ul>
+                    </li> -->
+                    <li class="nav-item dropdown mx-3">
+                        <a class="nav-link text-decoration-none d-flex justify-content-between align-items-center" 
+                        id="thirdPartyDropdown" role="button" (click)="toggleDropdown('thirdParty')">
+                            <span class="d-flex align-items-center">
+                                <i class="fas fa-handshake mb-1 me-2"></i>
+                                Third Party Risk
+                            </span>
+                            <i class="fas fa-chevron-right" [ngClass]="{'open': isDropdownOpen === 'thirdParty'}"></i>
+                        </a>
+                        <ul class="dropdown-menu" [ngClass]="{'show': isDropdownOpen === 'thirdParty'}" aria-labelledby="thirdPartyDropdown">
+                            <li><a class="dropdown-item">Vendor List</a></li>
+                            <li><a class="dropdown-item">Vendor Assessment</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Asset Management -->
+                    <!-- <li class="nav-item dropdown text-center mx-3">
+                        <a class="nav-link d-flex flex-column align-items-center text-decoration-none" href="#"
+                            id="assetManagement" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-box mb-1"></i>
+                            <span>Asset Management</span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="assetManagement">
+                            <li><a class="dropdown-item">Asset List</a></li>
+                            <li><a class="dropdown-item">Asset Report</a></li>
+                        </ul>
+                    </li> -->
+                    <li class="nav-item dropdown mx-3">
+                        <a class="nav-link text-decoration-none d-flex justify-content-between align-items-center" 
+                        id="assetDropdown" role="button" (click)="toggleDropdown('asset')">
+                            <span class="d-flex align-items-center">
+                                <i class="fas fa-box mb-1 me-2"></i>
+                                Asset Management
+                            </span>
+                            <i class="fas fa-chevron-right" [ngClass]="{'open': isDropdownOpen === 'asset'}"></i>
+                        </a>
+                        <ul class="dropdown-menu" [ngClass]="{'show': isDropdownOpen === 'asset'}" aria-labelledby="assetDropdown">
+                              <li><a class="dropdown-item">Asset List</a></li>
+                            <li><a class="dropdown-item">Asset Report</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Vulnerability Management -->
+                    <!-- <li class="nav-item dropdown text-center mx-3">
+                        <a class="nav-link d-flex flex-column align-items-center text-decoration-none" href="#"
+                            id="vulnerabilityManagement" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-shield-alt mb-1"></i>
+                            <span>Vulnerability Management</span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="vulnerabilityManagement">
+                            <li><a class="dropdown-item">Vulnerability List</a></li>
+                            <li><a class="dropdown-item">Vulnerability Report</a></li>
+                        </ul>
+                    </li> -->
+                    <li class="nav-item dropdown mx-3">
+                        <a class="nav-link text-decoration-none d-flex justify-content-between align-items-center" 
+                        id="vulnerabilityDropdown" role="button" (click)="toggleDropdown('vulnerability')">
+                            <span class="d-flex align-items-center">
+                                <i class="fas fa-shield-alt mb-1 me-2"></i>
+                                Vulnerability Management
+                            </span>
+                            <i class="fas fa-chevron-right" [ngClass]="{'open': isDropdownOpen === 'vulnerability'}"></i>
+                        </a>
+                        <ul class="dropdown-menu" [ngClass]="{'show': isDropdownOpen === 'vulnerability'}" aria-labelledby="vulnerabilityDropdown">
+                            <li><a class="dropdown-item">Vulnerability List</a></li>
+                            <li><a class="dropdown-item">Vulnerability Report</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Controls -->
+                    <!-- <li class="nav-item dropdown text-center mx-3">
+                        <a class="nav-link d-flex flex-column align-items-center text-decoration-none" href="#"
+                            id="controls" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-th mb-1"></i>
+                            <span>Controls</span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="controls">
+                            <li><a class="dropdown-item">Controls List</a></li>
+                            <li><a class="dropdown-item">Controls Report</a></li>
+                        </ul>
+                    </li> -->
+                    <li class="nav-item dropdown mx-3">
+                        <a class="nav-link text-decoration-none d-flex justify-content-between align-items-center" id="controlsDropdown" role="button" (click)="toggleDropdown('controls')">
+                            <span class="d-flex align-items-center">
+                                <i class="fas fa-th mb-1 me-2"></i>
+                                Controls
+                            </span>
+                            <i class="fas fa-chevron-right" [ngClass]="{'open': isDropdownOpen === 'controls'}"></i>
+                        </a>
+                        <ul class="dropdown-menu" [ngClass]="{'show': isDropdownOpen === 'controls'}" aria-labelledby="controlsDropdown">
+                            <li><a class="dropdown-item">Controls List</a></li>
+                            <li><a class="dropdown-item">Controls Report</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Administration -->
+                    <!-- <li class="nav-item dropdown text-center mx-3">
+                        <a class="nav-link d-flex flex-column align-items-center text-decoration-none" href="#"
+                            id="administration" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user-cog mb-1"></i>
+                            <span>Administration</span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="administration">
+                            <li><a class="dropdown-item">Administration List</a></li>
+                            <li><a class="dropdown-item">Administration Report</a></li>
+                        </ul>
+                    </li> -->
+                    <li class="nav-item dropdown mx-3">
+                        <a class="nav-link text-decoration-none d-flex justify-content-between align-items-center" id="administrationDropdown" role="button" (click)="toggleDropdown('administration')">
+                            <span class="d-flex align-items-center">
+                                <i class="fas fa-user-cog mb-1 me-2"></i>
+                                Administration
+                            </span>
+                            <i class="fas fa-chevron-right" [ngClass]="{'open': isDropdownOpen === 'administration'}"></i>
+                        </a>
+                        <ul class="dropdown-menu" [ngClass]="{'show': isDropdownOpen === 'administration'}" aria-labelledby="administrationDropdown">
+                            <li><a class="dropdown-item">Administration List</a></li>
+                            <li><a class="dropdown-item">Administration Report</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
+
 </section>
