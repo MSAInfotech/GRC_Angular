@@ -117,7 +117,7 @@
     }
 
     .dropdown-item:focus {
-        background-color: #7055c1 !important;
+        background-color: #495057 !important;
         :host ::ng-deep .show {
             visibility: hidden;
         }

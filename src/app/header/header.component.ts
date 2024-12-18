@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -10,9 +10,18 @@ import { RouterModule } from '@angular/router';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+  @HostListener('document:click', ['$event'])
   isDropdownOpen: string = '';
 
   toggleDropdown(dropdown: string) {
     this.isDropdownOpen = this.isDropdownOpen === dropdown ? '' : dropdown;
   }
+  
+  onClick(event: Event) {
+    const target = event.target as HTMLElement;
+    if (!target.closest('.nav-item')) {
+      this.isDropdownOpen = '';
+    }
+  }
 }
+
