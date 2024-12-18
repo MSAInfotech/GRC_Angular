@@ -50,12 +50,10 @@
     align-items: center;
     justify-content: space-between;
     border: 1px solid #ccc;
-    /* border-radius: 5px; */
     background-color: #fff;
     padding: 8px 12px;
     max-width: 200px;
     margin-left: auto;
-    /* Align to the right */
 }
 
 .dropdown-box:hover {
@@ -83,7 +81,6 @@
 .card h1 {
     font-size: 28px;
     color: #2d2d2d;
-    /* margin: 10px 0 5px; */
 }
 
 .card p {
@@ -121,7 +118,6 @@
     border-radius: 50%;
     border: 10px solid green;
     clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
-    /* 30% progress */
 }
 
 .chart-percentage {
@@ -144,26 +140,21 @@
     justify-content: space-between;
 }
 
-/* Add more specific styling for visual match */
 .card-title {
     color: #333;
-    /* Adjust color as needed */
     text-align: start;
 }
 
 .chart-circle {
     border-color: #ddd;
-    /* Adjust border color */
 }
 
 .chart-progress {
     border-color: #4CAF50;
-    /* Adjust progress bar color */
 }
 
 .list-group-item {
     color: #666;
-    /* Adjust text color */
 }
 
 :host ::ng-deep canvas {
@@ -187,7 +178,6 @@
     width: 20% !important;
 }
 
-/* jaymish */
 .progress-circle-container {
     width: 200px;
     height: 150px;
@@ -401,9 +391,6 @@
       padding: 0;
     }
   }
-  /* h6{
-    margin: 15px;
-  } */
 
 .status-square {
     width: 15px;

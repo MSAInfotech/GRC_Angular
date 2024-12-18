@@ -1,36 +1,29 @@
 .header {
     background-color: #ffffff;
-    /* Orange bottom border */
     color: #232323;
     padding-left: 3%;
     padding-right: 3%;
-    /* Dark text */
 }
 
 .header h1 {
     font-size: 15px;
     color: #eb812b;
-    /* Orange text for the title */
     margin: 0;
-    /* text-shadow: 1px 1px 0 #c0c0c0; */
 }
 
 .logo-img {
     height: 50px;
     width: 50px;
-    /* Set height for the logo */
 }
 
 .nav-icons i {
     color: #495057;
-    /* Icon color (dark gray) */
     cursor: pointer;
     transition: color 0.3s ease;
 }
 
 .nav-icons i:hover {
     color: #eb812b;
-    /* Orange color on hover */
 }
 
 .profile img {
@@ -38,7 +31,6 @@
     width: 24px;
     cursor: pointer;
     border: 2px solid #eb812b;
-    /* Border around the profile picture */
 }
 
 .profile span {
@@ -99,14 +91,14 @@
         height: 0;
         overflow: hidden;
     }
-    
+
     .nav-item .dropdown-menu.show {
         display: block !important;
         opacity: 1;
         transform: scaleY(1);
         height: auto;
     }
-    
+
     .fas.fa-chevron-right.open {
         transform: rotate(90deg);
     }
@@ -125,14 +117,30 @@
         margin-top: 0;
         min-width: fit-content;
         width: 100%;
+        transition: all 0.5s ease;
+        transform: translateY(-10px);
+        transition: all 0.5s ease-in-out;
     }
-  
+
+    .dropdown-item:focus {
+        background-color: #7055c1 !important;
+        :host ::ng-deep .show {
+            visibility: hidden;
+        }
+    }
+
     :host ::ng-deep .offcanvas-backdrop {
         opacity: 0 !important;
-      }
+    }
 
-    .show {
+    .offcanvas.show,
+    .offcanvas.showing {
         visibility: hidden;
+    }
+
+    .dropdown-item:hover {
+        color: #495057;
+        background-color: #eb812b !important;
     }
 }
 
@@ -171,7 +179,7 @@
 
 .offcanvas-start {
     width: 255px !important;
-    background-color: #495057;  
+    background-color: #495057;
 }
 
 .offcanvas-header {

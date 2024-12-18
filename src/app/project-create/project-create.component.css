@@ -19,10 +19,6 @@ body {
   padding: 1rem;
 }
 
-main {
-  padding: 2rem 0;
-}
-
 .form-container {
   background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -189,4 +185,13 @@ main {
   border-radius: 0.25rem;
   background-color: white;
   color: black;
+}
+
+::ng-deep .p-togglebutton.p-togglebutton-checked {
+  background-color: #63b3ed !important;
+  color: black !important;
+}
+
+::ng-deep .p-togglebutton.p-togglebutton-checked::before{
+  background-color: #63b3ed !important;
 }

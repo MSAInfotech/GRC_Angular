@@ -87,10 +87,6 @@
                     <td>{{projectControlInfo.automation}}</td>
 
                     <td>
-                        <!-- <p-dropdown [options]="responsible" [panelStyle]="{ width: '100%' }"
-                            [(ngModel)]="projectControlInfo.responsible" placeholder="Select"
-                            [style]="{ width: '150px' }" [appendTo]="'body'"></p-dropdown> -->
-
                         <p-select [options]="responsible" [(ngModel)]="projectControlInfo.responsible"
                             [panelStyle]="{ width: '100%' }" [appendTo]="'body'" [style]="{ width: '150px' }"
                             placeholder="Select">
@@ -113,9 +109,6 @@
 
                     </td>
                     <td>
-                        <!-- <p-dropdown [options]="approverOptions" [panelStyle]="{ width: '100%' }"
-                            [(ngModel)]="projectControlInfo.approver" placeholder="Select" [style]="{ width: '150px' }"
-                            [appendTo]="'body'"></p-dropdown> -->
                         <p-select [options]="approverOptions" [(ngModel)]="projectControlInfo.approver"
                             [panelStyle]="{ width: '100%' }" [appendTo]="'body'" [style]="{ width: '150px' }"
                             placeholder="Select" />
@@ -127,9 +120,6 @@
                     </td>
                     <!-- <td>{{ContactInfo.frequency}}</td> -->
                     <td>
-                        <!-- <p-dropdown [options]="frequency" [panelStyle]="{ width: '100%' }" [appendTo]="'body'"
-                            [(ngModel)]="projectControlInfo.frequency" placeholder="Select"
-                            [style]="{ width: '130px' }"></p-dropdown> -->
                         <p-select [options]="frequency" [(ngModel)]="projectControlInfo.frequency"
                             [panelStyle]="{ width: '100%' }" [appendTo]="'body'" [style]="{ width: '150px' }"
                             placeholder="Select" />

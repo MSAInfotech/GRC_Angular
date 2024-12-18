@@ -20,7 +20,7 @@
                         aria-expanded="false">
                     <!-- User Name -->
                     <span class="fw-medium text-muted dropdown-toggle align-content-center profileDropdownText" id="profileDropdownText"
-                        data-bs-toggle="dropdown" aria-expanded="false">
+                        data-bs-toggle="dropdown" role="button" aria-expanded="false">
                         Bilal Ahmed
                     </span>
                     <ul class="dropdown-menu dropdown-menu-end rounded-1" aria-labelledby="profileDropdown">
@@ -41,7 +41,7 @@
         </div>
     </div>
     <div class="sub-header">
-        <nav class="navbar navbar-expand-lg navbar-dark px-4 w-100">
+        <nav class="navbar navbar-expand-lg navbar-dark px-1 w-100">
             <div class="container-fluid">
 
                 <!-- Sidebar Toggle Button -->
@@ -188,7 +188,7 @@
                         </a>
                     </li> -->
                     <li class="nav-item dropdown mx-3 position-relative">
-                        <a routerLink="/dashboard" class="nav-link text-decoration-none d-flex justify-content-between align-items-center" role="button">
+                        <a routerLink="/dashboard" data-bs-dismiss="offcanvas" class="nav-link text-decoration-none d-flex justify-content-between align-items-center" role="button">
                             <span class="d-flex align-items-center">
                                 <i class="fas fa-chart-line mb-1 me-2"></i>
                                 Global Dashboards
@@ -208,7 +208,8 @@
                         </ul>
                     </li> -->
                     <li class="nav-item dropdown mx-3 position-relative">
-                        <a class="nav-link text-decoration-none d-flex justify-content-between align-items-center" id="complianceDropdown" role="button" (click)="toggleDropdown('compliance')">
+                        <a class="nav-link text-decoration-none d-flex justify-content-between align-items-center"
+                         id="complianceDropdown" role="button" (click)="toggleDropdown('compliance')">
                             <span class="d-flex align-items-center">
                                 <i class="fas fa-shield-alt mb-1 me-2"></i>
                                 Compliance
@@ -216,8 +217,8 @@
                             <i class="fas fa-chevron-right" [ngClass]="{'open': isDropdownOpen === 'compliance'}"></i>
                         </a>
                         <ul class="dropdown-menu" [ngClass]="{'show': isDropdownOpen === 'compliance'}" aria-labelledby="complianceDropdown">
-                            <li><a routerLink="/project-view" class="dropdown-item">Project</a></li>
-                            <li><a class="dropdown-item">Audit Logs</a></li>
+                            <li><a routerLink="/project-view" data-bs-dismiss="offcanvas" (click)="toggleDropdown('')" class="dropdown-item">Project</a></li>
+                            <li><a class="dropdown-item" data-bs-dismiss="offcanvas" (click)="toggleDropdown('')">Audit Logs</a></li>
                         </ul>
                     </li>
 
@@ -242,8 +243,8 @@
                             <i class="fas fa-chevron-right" [ngClass]="{'open': isDropdownOpen === 'policy'}"></i>
                         </a>
                         <ul class="dropdown-menu" [ngClass]="{'show': isDropdownOpen === 'policy'}" aria-labelledby="policyDropdown">
-                            <li><a class="dropdown-item">Policy List</a></li>
-                            <li><a class="dropdown-item">Policy Updates</a></li>
+                            <li><a class="dropdown-item" data-bs-dismiss="offcanvas" (click)="toggleDropdown('')">Policy List</a></li>
+                            <li><a class="dropdown-item" data-bs-dismiss="offcanvas" (click)="toggleDropdown('')">Policy Updates</a></li>
                         </ul>
                     </li>
 
@@ -269,8 +270,8 @@
                             <i class="fas fa-chevron-right" [ngClass]="{'open': isDropdownOpen === 'risk'}"></i>
                         </a>
                         <ul class="dropdown-menu" [ngClass]="{'show': isDropdownOpen === 'risk'}" aria-labelledby="riskDropdown">
-                            <li><a class="dropdown-item">Risk Assessment</a></li>
-                            <li><a class="dropdown-item">Risk Reports</a></li>
+                            <li><a class="dropdown-item" data-bs-dismiss="offcanvas" (click)="toggleDropdown('')">Risk Assessment</a></li>
+                            <li><a class="dropdown-item" data-bs-dismiss="offcanvas" (click)="toggleDropdown('')">Risk Reports</a></li>
                         </ul>
                     </li>
 
@@ -296,8 +297,8 @@
                             <i class="fas fa-chevron-right" [ngClass]="{'open': isDropdownOpen === 'thirdParty'}"></i>
                         </a>
                         <ul class="dropdown-menu" [ngClass]="{'show': isDropdownOpen === 'thirdParty'}" aria-labelledby="thirdPartyDropdown">
-                            <li><a class="dropdown-item">Vendor List</a></li>
-                            <li><a class="dropdown-item">Vendor Assessment</a></li>
+                            <li><a class="dropdown-item" data-bs-dismiss="offcanvas" (click)="toggleDropdown('')">Vendor List</a></li>
+                            <li><a class="dropdown-item" data-bs-dismiss="offcanvas" (click)="toggleDropdown('')">Vendor Assessment</a></li>
                         </ul>
                     </li>
 
@@ -323,8 +324,8 @@
                             <i class="fas fa-chevron-right" [ngClass]="{'open': isDropdownOpen === 'asset'}"></i>
                         </a>
                         <ul class="dropdown-menu" [ngClass]="{'show': isDropdownOpen === 'asset'}" aria-labelledby="assetDropdown">
-                              <li><a class="dropdown-item">Asset List</a></li>
-                            <li><a class="dropdown-item">Asset Report</a></li>
+                              <li><a class="dropdown-item" data-bs-dismiss="offcanvas" (click)="toggleDropdown('')">Asset List</a></li>
+                            <li><a class="dropdown-item" data-bs-dismiss="offcanvas" (click)="toggleDropdown('')">Asset Report</a></li>
                         </ul>
                     </li>
 
@@ -350,8 +351,8 @@
                             <i class="fas fa-chevron-right" [ngClass]="{'open': isDropdownOpen === 'vulnerability'}"></i>
                         </a>
                         <ul class="dropdown-menu" [ngClass]="{'show': isDropdownOpen === 'vulnerability'}" aria-labelledby="vulnerabilityDropdown">
-                            <li><a class="dropdown-item">Vulnerability List</a></li>
-                            <li><a class="dropdown-item">Vulnerability Report</a></li>
+                            <li><a class="dropdown-item" data-bs-dismiss="offcanvas" (click)="toggleDropdown('')">Vulnerability List</a></li>
+                            <li><a class="dropdown-item" data-bs-dismiss="offcanvas" (click)="toggleDropdown('')">Vulnerability Report</a></li>
                         </ul>
                     </li>
 
@@ -368,16 +369,17 @@
                         </ul>
                     </li> -->
                     <li class="nav-item dropdown mx-3">
-                        <a class="nav-link text-decoration-none d-flex justify-content-between align-items-center" id="controlsDropdown" role="button" (click)="toggleDropdown('controls')">
+                        <a class="nav-link text-decoration-none d-flex justify-content-between align-items-center"
+                         id="controlsDropdown" aria-expanded="false" role="button" (click)="toggleDropdown('controls')">
                             <span class="d-flex align-items-center">
                                 <i class="fas fa-th mb-1 me-2"></i>
                                 Controls
                             </span>
                             <i class="fas fa-chevron-right" [ngClass]="{'open': isDropdownOpen === 'controls'}"></i>
                         </a>
-                        <ul class="dropdown-menu" [ngClass]="{'show': isDropdownOpen === 'controls'}" aria-labelledby="controlsDropdown">
-                            <li><a class="dropdown-item">Controls List</a></li>
-                            <li><a class="dropdown-item">Controls Report</a></li>
+                        <ul class="dropdown-menu" #controls [ngClass]="{'show': isDropdownOpen === 'controls'}" aria-labelledby="controlsDropdown">
+                            <li><a class="dropdown-item" data-bs-dismiss="offcanvas" (click)="toggleDropdown('')">Controls List</a></li>
+                            <li><a class="dropdown-item" data-bs-dismiss="offcanvas" (click)="toggleDropdown('')">Controls Report</a></li>
                         </ul>
                     </li>
 
@@ -402,8 +404,8 @@
                             <i class="fas fa-chevron-right" [ngClass]="{'open': isDropdownOpen === 'administration'}"></i>
                         </a>
                         <ul class="dropdown-menu" [ngClass]="{'show': isDropdownOpen === 'administration'}" aria-labelledby="administrationDropdown">
-                            <li><a class="dropdown-item">Administration List</a></li>
-                            <li><a class="dropdown-item">Administration Report</a></li>
+                            <li><a class="dropdown-item" data-bs-dismiss="offcanvas">Administration List</a></li>
+                            <li><a class="dropdown-item" data-bs-dismiss="offcanvas">Administration Report</a></li>
                         </ul>
                     </li>
                 </ul>

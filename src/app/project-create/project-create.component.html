@@ -1,118 +1,85 @@
-<main>
-  <div class="dashboard-container">
-    <!-- <div class="form-header">
+<div class="dashboard-container">
+  <!-- <div class="form-header">
       <h6 class="font-bold">Create Compliance Project</h6>
     </div> -->
-    <div class>
-      
+  <div class>
 
-      <!-- Tab Navigation -->
-      <div class="tabs">
-        <button 
-          class="tab-button" 
-          [class.active]="currentTab === 'details'" 
-          (click)="switchTab('details')">
-          Project Details
-        </button>
-        <button 
-          class="tab-button" 
-          [class.active]="currentTab === 'finish'" 
-          [disabled]="!isFinishTabEnabled" 
-          (click)="switchTab('finish')">
-          Finish
-        </button>
+
+    <!-- Tab Navigation -->
+    <div class="tabs">
+      <button class="tab-button" [class.active]="currentTab === 'details'" (click)="switchTab('details')">
+        Project Details
+      </button>
+      <button class="tab-button" [class.active]="currentTab === 'finish'" [disabled]="!isFinishTabEnabled"
+        (click)="switchTab('finish')">
+        Finish
+      </button>
+    </div>
+
+    <!-- Tab Content -->
+    <div *ngIf="currentTab === 'details'" class="tab-content">
+      <!-- Progress Bar -->
+      <div class="progress-bar">
+        <div class="progress" [style.width.%]="progress"></div>
       </div>
 
-      <!-- Tab Content -->
-      <div *ngIf="currentTab === 'details'" class="tab-content">
-        <!-- Progress Bar -->
-        <div class="progress-bar">
-          <div class="progress" [style.width.%]="progress"></div>
+      <!-- Form Content -->
+      <form (ngSubmit)="onNext()">
+        <!-- Project Name -->
+        <div class="form-group">
+          <label for="projectName">Project Name <span class="text-danger">*</span></label>
+          <input id="projectName" type="text" [(ngModel)]="formData.projectName" name="projectName"
+            (input)="updateProgressBar()" required />
         </div>
 
-        <!-- Form Content -->
-        <form (ngSubmit)="onNext()">
-          <!-- Project Name -->
-          <div class="form-group">
-            <label for="projectName">Project Name *</label>
-            <input 
-              id="projectName" 
-              type="text" 
-              [(ngModel)]="formData.projectName" 
-              name="projectName" 
-              (input)="updateProgressBar()" 
-              required />
-          </div>
-
-          <!-- Description -->
-          <div class="form-group">
-            <label for="description">Description *</label>
-            <textarea 
-              id="description" 
-              [(ngModel)]="formData.description" 
-              name="description" 
-              (input)="updateProgressBar()" 
-              required>
+        <!-- Description -->
+        <div class="form-group">
+          <label for="description">Description <span class="text-danger">*</span></label>
+          <textarea id="description" [(ngModel)]="formData.description" name="description" (input)="updateProgressBar()"
+            required>
             </textarea>
-          </div>
-
-          <!-- Standard -->
-          <div class="form-group">
-            <label for="standard">Standard *</label>
-            <select 
-              id="standard" 
-              [(ngModel)]="formData.standard" 
-              name="standard" 
-              (change)="updateProgressBar()" 
-              required>
-              <option value="ISO/IEC 27001-2:2022">ISO/IEC 27001-2:2022</option>
-            </select>
-          </div>
-
-          <!-- Map to Project -->
-          <div class="form-group">
-            <label for="mapToProject">Map to project</label>
-            <select 
-              id="mapToProject" 
-              [(ngModel)]="formData.mapToProject" 
-              name="mapToProject"
-              (change)="updateProgressBar()">
-              <option value="" disabled selected>Choose existing project</option>
-              <option value="Option 1">Option 1</option>
-              <option value="Option 2">Option 2</option>
-            </select>
-          </div>
-
-          <!-- Auto-Generate Risk Register -->
-          <div class="form-group">
-            <label for="autoGenerate">Auto-generate corresponding risk register</label>
-            <select 
-              id="autoGenerate" 
-              [(ngModel)]="formData.autoGenerate" 
-              name="autoGenerate" 
-              (change)="updateProgressBar()">
-              <option value="No">No</option>
-              <option value="Yes">Yes</option>
-            </select>
-          </div>
-
-          <!-- Form Actions -->
-          <div class="form-actions">
-            <button type="submit" class="btn-primary">Next</button>
-          </div>
-        </form>
-      </div>
-
-      <div *ngIf="currentTab === 'finish'" class="tab-content">
-        <div class="progress-bar">
-          <div class="progress" [style.width.%]="progress"></div>
         </div>
-        <p>You can customize this tab according to your requirements.</p>
+
+        <!-- Standard -->
+        <div class="form-group">
+          <label for="standard">Standard <span class="text-danger">*</span></label>
+          <p-select [options]="standardOptions" [(ngModel)]="formData.standard" id="standard" name="standard"
+            [panelStyle]="{ width: '100%' }" placeholder="Choose standard options" [appendTo]="'body'"
+            (onChange)="updateProgressBar()" class="form-control" />
+        </div>
+
+        <!-- Map to Project -->
+        <div class="form-group">
+          <label for="mapToProject">Map to project</label>
+          <p-select [options]="mapToProjectOptions" [(ngModel)]="formData.mapToProject" id="mapToProject"
+            name="mapToProject" [panelStyle]="{ width: '100%' }" [appendTo]="'body'" (onChange)="updateProgressBar()"
+            placeholder="Choose existing project" class="form-control" />
+        </div>
+
+        <!-- Auto-Generate Risk Register -->
+        <div class="form-group">
+          <label for="autoGenerate" class="col-sm-2 col-form-label">Auto-generate corresponding risk register</label>
+          <p-togglebutton [(ngModel)]="formData.autoGenerate" id="autoGenerate" name="autoGenerate"
+            (onChange)="updateProgressBar()" offIcon="pi pi-times" onIcon="pi pi-check" class="ng-invalid ng-dirty"
+            styleClass="w-full sm:w-20" aria-label="Confirmation" />
+        </div>
+
+        <!-- Form Actions -->
         <div class="form-actions">
-          <button class="btn-primary" (click)="onFinish()">Finish Project</button>
+          <button type="submit" class="btn-primary">Next</button>
         </div>
+      </form>
+    </div>
+
+    <div *ngIf="currentTab === 'finish'" class="tab-content">
+      <div class="progress-bar">
+        <div class="progress" [style.width.%]="progress"></div>
+      </div>
+      <p>You can customize this tab according to your requirements.</p>
+      <div class="form-actions">
+        <button class="btn-primary" (click)="onFinish()">Finish Project</button>
       </div>
     </div>
   </div>
-</main>
-<p-toast/>
+</div>
+<p-toast />
